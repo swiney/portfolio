@@ -31,4 +31,11 @@ img:
 
 My Other Video:
 
-<iframe width="3370" height="1135" src="https://www.youtube.com/embed/93DAzg9cZGc" title="Tracky Trainz - Official Reveal Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/93DAzg9cZGc" title="Tracky Trainz - Official Reveal Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+MY resume:
+
+Check out resume [Sheng's resume][jekyll-docs]
+
+[jekyll-docs]: http://artofsheng.com/assets/sheng_resume_2025_10_v1.pdf
