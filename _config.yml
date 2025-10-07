@@ -14,6 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 logo: "/assets/images/bio-photo.jpg"
+header:
+  overlay_image: "/assets/images/header.png"
+  overlay_filter: 0.3  # darkens the image a bit for contrast
+  caption: "Sheng — Tech Art & Game Development"
 title: Sheng Tech Art Portfolio
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -62,6 +66,9 @@ author:
   avatar : "/assets/images/profile_pic_smiley.png"
   bio    : "Tech Artist / Game Developer / 3D Wiz"
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-square-linkedin"
+      url: "https://www.linkedin.com/in/swiney/"
     - label: "X (Formerly Twitter)"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/swineyX"
@@ -74,6 +81,9 @@ author:
 
 footer:
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-square-linkedin"
+      url: "https://www.linkedin.com/in/swiney/"
     - label: "X (Formerly Twitter)"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/swineyX"
@@ -85,16 +95,21 @@ footer:
       url: "https://vimeo.com/swiney"
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      css:
+        - /assets/css/main.css
   # _posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: false
       comments: false
-      share: true
+      share: false
       related: false
       show_date: false
   # _pages
@@ -111,3 +126,16 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+
+# # Theme settings
+# google_fonts:
+#   - family: "Lexend"
+#     weights: "200,400,700"
+#   - family: "Merriweather"
+#     weights: "400,700"

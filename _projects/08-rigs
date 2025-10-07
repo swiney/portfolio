@@ -1,0 +1,16 @@
+---
+title: "Rigging"
+description: "Collection of interesting rigs"
+thumbnail_static: /assets/thumbnails/test-thumbnail.png
+thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+layout: project
+permalink: /projects/rigging/
+weight: 80 # Order for gallery
+---
+
+interesting ones
+
+
+Link: [text][linkref]
+
+[linkref]: www.google.com

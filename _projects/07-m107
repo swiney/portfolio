@@ -1,0 +1,16 @@
+---
+title: "Barrett M107"
+description: "Fully rigged and disassemblable rifle"
+thumbnail_static: /assets/thumbnails/test-thumbnail.png
+thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+layout: project
+permalink: /projects/m107/
+weight: 70 # Order for gallery
+---
+
+
+
+
+Link: [text][linkref]
+
+[linkref]: www.google.com

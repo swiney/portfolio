@@ -1,0 +1,16 @@
+---
+title: "Shaders"
+description: "Collection of various shader"
+thumbnail_static: /assets/thumbnails/test-thumbnail.png
+thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+layout: project
+permalink: /projects/shaders/
+weight: 60 # Order for gallery
+---
+
+avatar customisation toolset
+
+
+Link: [text][linkref]
+
+[linkref]: www.google.com

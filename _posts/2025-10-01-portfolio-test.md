@@ -1,11 +1,13 @@
 ---
 title: "Portfolio Test"
 date: 2025-10-01T00:00:00-00:00
-categories:
-  - blog
-tags:
-  - Jekyll
-  - update
+description: "A cool description"
+thumbnail: /assets/thumbnails/test-thumbnail.gif
+#categories:
+#  - blog
+#tags:
+#  - Jekyll
+#  - update
 ---
 
 This portfolio is in my `_posts` directory.

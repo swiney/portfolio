@@ -1,0 +1,16 @@
+---
+title: "Character Customisation Systems"
+description: "Customisable 3D Character System"
+thumbnail_static: /assets/thumbnails/test-thumbnail.png
+thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+layout: project
+permalink: /projects/character-customisation-systems/
+weight: 50 # Order for gallery
+---
+
+avatar customisation toolset
+
+
+Link: [text][linkref]
+
+[linkref]: www.google.com

@@ -1,0 +1,133 @@
+// ------------------------
+// Fonts
+// ------------------------
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;700&display=swap');
+
+/* Apply Lexend to everything */
+body *:not(.fa):not(.fab):not(.fas):not(.far):not(.fal) {
+  font-family: 'Lexend', sans-serif !important;
+}
+
+// body, .visible-links {
+//   font-family: 'Lexend', sans-serif !important;;   // body text
+//   color: #333333;                        // body text color
+// //   background-color: #111111;             // page background
+// }
+
+// h1, h2, h3, h4, h5, h6, .site-title {
+//   font-family: 'Lexend', sans-serif !important;
+//   color: #338833;
+// }
+
+// /* Author bio section */
+// .author__bio, 
+// .author__bio p,
+// .author__urls-wrapper,
+// .author__urls-wrapper * {
+//   font-family: 'Lexend', sans-serif !important;
+// }
+
+// ------------------------
+// Links
+// ------------------------
+a {
+  color: #FF6600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF9933;
+}
+
+// ------------------------
+// Buttons
+// ------------------------
+.btn {
+  background-color: #FF6600;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #FF9933;
+}
+
+// ------------------------
+// Project gallery cards
+// ------------------------
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  max-width: 1300px;   // keeps it nicely centered on large screens
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;     // small padding for mobile
+}
+
+.portfolio-gallery a div {
+  background-color: #222222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-gallery a div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+// Thumbnail container for hover GIF swap
+.portfolio-gallery .project-thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover .animated {
+    opacity: 1;
+  }
+
+  &:hover .static {
+    opacity: 0;
+  }
+}
+
+.portfolio-gallery h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+}
+
+.portfolio-gallery p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #CCCCCC;
+}
+
+
+// ------------------------
+// Optional: header overlay text
+// ------------------------
+.header-caption {
+  color: #FFFFFF;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.6);
+}
