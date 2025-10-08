@@ -30,6 +30,8 @@ Throughout January 2024 - March 2024, I created 3 animations, for consecutive [L
 
 
 
+<iframe width="1451" height="825" src="https://www.youtube.com/embed/93DAzg9cZGc" title="Tracky Trainz - Official Reveal Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 [loopdeloop-insta]: https://www.instagram.com/loopdeloop_animation

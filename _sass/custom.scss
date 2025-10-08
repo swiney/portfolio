@@ -6,18 +6,24 @@
 
 :root {
   --accent-color: #f74760;
+  --maintext-color: #F6F6F6;
+  --dark-text-color: #8a8a8a;
+  --page-bg: #222222;
+  --darker-bg: #1c1c1c;
+
 }
 
 
 html, body {
-  background-color: #222222;
-  color: #E0E0E0;
+  background-color: var(--page-bg);
+  color: var(--maintext-color);
 }
 
 // .masthead,
 .page__footer {
-  background-color: var(--accent-color);
-  color: #222222;
+  background-color: var(--darker-bg);
+  color: var(--dark-text-color);
+  text-align: center;
 }
 
 
@@ -46,6 +52,10 @@ body *:not(.fa):not(.fab):not(.fas):not(.far):not(.fal) {
 //   font-family: 'Lexend', sans-serif !important;
 // }
 
+.spacer {
+  height: 20px;
+}
+
 // ------------------------
 // Links
 // ------------------------
@@ -55,7 +65,7 @@ a {
 }
 
 a:hover {
-  color: #00ff00;
+  color: var(--accent-color);
 }
 
 // ------------------------
@@ -328,11 +338,13 @@ a:hover {
 
 .title-separator {
   position: relative;
-  width: 1000px;
+  width: 96%;              /* responsive width */
+  max-width: 1000px;       /* don't exceed this on wide screens */
   height: 3px;
   background-color: var(--accent-color);
   margin: 0 auto 1.5rem auto;
 }
+
 
 .title-separator .diamond {
   position: absolute;
@@ -344,3 +356,141 @@ a:hover {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------
+// PROJECT PAGE CSS
+// ------------------------
+.project-container {
+  max-width: 900px;   // adjust as needed
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.0rem;
+  padding-bottom: 0.0rem;
+
+  .breadcrumb-link {
+    font-size: 0.8rem;
+    color: var(--maintext-color);
+    text-decoration: none;
+    margin-right: -0.4rem;
+  }
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: var(--accent-color);
+  font-variant: small-caps;
+  margin-top: -0.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project-content iframe {
+  width: 100% !important;
+  height: auto !important;        // ignore fixed iframe height
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+
+
+
+
+
+
+
+// ------------------------
+// PROFICIENCIES SECTION CSS
+// ------------------------
+.proficiencies-container {
+  max-width: 1000px;       /* or match your main content width */
+  margin: 0 auto;
+  column-count: 2;         /* two columns */
+  column-gap: 3rem;        /* spacing between columns */
+  font-size: 0.8rem;
+  color: var(--maintext-color);
+}
+
+/* Headings */
+.proficiencies-container h2,
+.proficiencies-container h3 {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  border: none;                  /* remove underline */
+  margin-top: 1.2rem;
+  margin-bottom: 0.0rem;
+}
+
+/* Remove auto heading anchor links (Minimal Mistakes adds these) */
+.proficiencies-container .header-link {
+  display: none;
+}
+
+.proficiencies-container p {
+  white-space: pre-line;
+}
+
+/* Lists */
+.proficiencies-container ul {
+  list-style-type: none;       /* remove default bullets */
+  padding-left: 0rem;          /* reduce indentation */
+  margin: 0 0 0.5rem 0;
+}
+
+.proficiencies-container li::before {
+  content: "► ";              /* you could also use ► or ■ here */
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.proficiencies-container li {
+  margin-bottom: 0.25rem;
+}
+
+/* Sub-lists */
+.proficiencies-container ul ul {
+  padding-left: 1rem;        /* smaller indent for sub-items */
+}
+
+.proficiencies-container ul ul li::before {
+  content: "▪ ";
+  color: var(--accent-color);
+//   font-size: 0.8rem;
+}
+
+.proficiencies-container .skill-block {
+  break-inside: avoid;     /* keep block together in one column */
+  -webkit-column-break-inside: avoid; /* Safari */
+  page-break-inside: avoid;            /* older browsers */
+  margin-bottom: 1.5rem;   /* space between blocks */
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .proficiencies-container {
+    column-count: 1;
+  }
+}
