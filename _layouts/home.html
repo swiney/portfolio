@@ -5,52 +5,70 @@ author_profile: false
 {% include head.html %}
 
 
-{{ content }}
+<!-- HEADER -->
+<header class="site-header">
+  <img src="/assets/images/header.png" alt="Header">
+  <h1 class="header-title">Sheng Xu</h1>
+</header>
 
-<h1 style="color:red;">Hello! I'm Sheng</h1>
-<b>Check out my work!</b>
-<!-- 
+
+
+
+
+<!-- {{ content }} -->
+
+
+<div class="home-intro">
+  <p>
+    Hello! I'm Sheng, a Technical Artist with 10+ years of experience across a wide range of projects. 
+    I am highly skilled in all areas of the 3D and Game Development pipeline, but the true value lies 
+    in my ability to bridge art and technology.
+  </p>
+  <p>
+    I am a force multiplier — I empower creative teams to achieve more than they could have imagined, 
+    and enable them to do more, in less time!
+  </p>
+  <p>
+    Please check out my work!
+  </p>
+</div>
+
+
+
+
+<!-- Single Column of project cards -->
 <section class="portfolio-gallery">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem;">
+  <div class="portfolio-list">
     {% assign sorted_projects = site.projects | sort: 'weight' %}
     {% for project in sorted_projects %}
-      <a href="{{ project.url | relative_url }}" style="text-decoration: none; color: inherit;">
-        <div style="border-radius: 8px; overflow: hidden; background: #222;">
-          <img src="{{ project.thumbnail }}" alt="{{ project.title }}" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
-          <div style="padding: 0.5rem 0.75rem;">
-            <h3 style="margin: 0; font-size: 1.1rem;">{{ project.title }}</h3>
-            <p style="margin: 0; font-size: 0.9rem;">{{ project.description }}</p>
+      <a href="{{ project.url | relative_url }}" class="project-card">
+        <!-- Thumbnail on the LEFT now -->
+        <div class="project-thumb">
+          {% if project.thumbnail_static %}
+            <img class="static" src="{{ project.thumbnail_static | relative_url }}" alt="{{ project.title }}">
+          {% endif %}
+          {% if project.thumbnail_animated %}
+            <img class="animated" src="{{ project.thumbnail_animated | relative_url }}" alt="{{ project.title }}">
+          {% endif %}
+          {% unless project.thumbnail_static or project.thumbnail_animated %}
+            <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
+          {% endunless %}
+
+          <div class="title-overlay">
+            <div class="subtitle">{{ project.subtitle }}</div>
+            <div class="title">{{ project.title }}</div>
           </div>
         </div>
-      </a>
-    {% endfor %}
-  </div>
-</section> -->
 
-
-<section class="portfolio-gallery">
-  <div class="portfolio-grid">
-    {% assign sorted_projects = site.projects | sort: 'weight' %}
-    {% for project in sorted_projects %}
-      <a href="{{ project.url | relative_url }}" style="text-decoration: none; color: inherit;">
-        <div class="project-card">
-          <div class="project-thumb">
-            {% if project.thumbnail_static %}
-              <img class="static" src="{{ project.thumbnail_static | relative_url }}" alt="{{ project.title }}">
-            {% endif %}
-            {% if project.thumbnail_animated %}
-              <img class="animated" src="{{ project.thumbnail_animated | relative_url }}" alt="{{ project.title }}">
-            {% endif %}
-            {% unless project.thumbnail_static or project.thumbnail_animated %}
-              <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
-            {% endunless %}
-          </div>
-          <div style="padding: 0.5rem 0.75rem;">
-            <h3 style="margin: 0; font-size: 1.1rem;">{{ project.title }}</h3>
-            <p style="margin: 0; font-size: 0.8rem;">{{ project.description }}</p>
+        
+        <div class="project-description">
+          <div class="description-content">
+            <p class="description-text">{{ project.description }}</p>
+            <span class="see-more">...see more</span>
           </div>
         </div>
       </a>
     {% endfor %}
   </div>
 </section>
+

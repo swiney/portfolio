@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 logo: "/assets/images/bio-photo.jpg"
-header:
-  overlay_image: "/assets/images/header.png"
-  overlay_filter: 0.3  # darkens the image a bit for contrast
-  caption: "Sheng — Tech Art & Game Development"
-title: Sheng Tech Art Portfolio
+# header:
+#   overlay_image: "/assets/images/header_red.png"
+  # overlay_filter: 0.3  # darkens the image a bit for contrast
+  # caption: "Sheng — Tech Art & Game Development"
+title: Sheng's Tech Art Portfolio
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Technical Artist Portfolio for Sheng Xu. Specializing in Unity, Unity3D, Autodesk Maya, Python, MEL, C#, HLSL, Shadergraph, VFX Graph.
@@ -62,7 +62,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Sheng Bean"
+  name   : "Sheng Xu"
   avatar : "/assets/images/profile_pic_smiley.png"
   bio    : "Tech Artist / Game Developer / 3D Wiz"
   links:
@@ -95,11 +95,11 @@ footer:
       url: "https://vimeo.com/swiney"
 
 defaults:
-  - scope:
-      path: ""
-    values:
-      css:
-        - /assets/css/main.css
+  # - scope:
+  #     path: ""
+  #   values:
+  #     css:
+  #       - /assets/css/main.css
   # _posts
   - scope:
       path: ""
@@ -131,11 +131,3 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-
-
-# # Theme settings
-# google_fonts:
-#   - family: "Lexend"
-#     weights: "200,400,700"
-#   - family: "Merriweather"
-#     weights: "400,700"

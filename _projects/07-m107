@@ -1,8 +1,9 @@
 ---
 title: "Barrett M107"
+subtitle: "Fully rigged 3D Asset"
 description: "Fully rigged and disassemblable rifle"
-thumbnail_static: /assets/thumbnails/test-thumbnail.png
-thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+thumbnail_static: /assets/projects/01/thumbnail3.png
+thumbnail_animated: /assets/projects/01/thumbnail4.png
 layout: project
 permalink: /projects/m107/
 weight: 70 # Order for gallery

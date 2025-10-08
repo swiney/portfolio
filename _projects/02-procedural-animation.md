@@ -1,8 +1,9 @@
 ---
-title: "Procedural Animation"
+title: "Clockwork Spider"
+subtitle: "Procedural Animation"
 description: "Procedurally animated clockwork spider"
-thumbnail_static: /assets/projects/02/thumbnail.png
-# thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+thumbnail_static: /assets/projects/02/thumbnail3.png
+thumbnail_animated: /assets/projects/02/thumbnail4.png
 layout: project
 permalink: /projects/procedural-animation/
 weight: 20 # Order for gallery

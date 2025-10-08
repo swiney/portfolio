@@ -1,8 +1,9 @@
 ---
 title: "Flipbook Animation System"
+subtitle: "Maya and Unity Toolset"
 description: "2D Flipbook-style Animations on 3D Characters"
-thumbnail_static: /assets/thumbnails/test-thumbnail.png
-thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+thumbnail_static: /assets/projects/04/thumbnail1.png
+thumbnail_animated: /assets/projects/04/thumbnail2.png
 layout: project
 permalink: /projects/runtime-animation-rigging/
 weight: 40 # Order for gallery

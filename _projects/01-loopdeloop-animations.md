@@ -1,8 +1,9 @@
 ---
-title: "Loopdeloop Animations"
-description: "Looping animations made in Maya/Unity"
-thumbnail_static: /assets/projects/01/thumbnail.png
-# thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+title: "Loopdeloop"
+subtitle: "Realtime Animations"
+description: "Perfectly looping animations made in Maya/Unity, utilising a huge range of tech and art skills. The animations were made for 3 consecutive loopdeloop challenges with the themes: Boat, Ball and March."
+thumbnail_static: /assets/projects/01/thumbnail3.png
+thumbnail_animated: /assets/projects/01/thumbnail4.png
 layout: project
 permalink: /projects/loopdeloop/
 weight: 10 # Order for gallery

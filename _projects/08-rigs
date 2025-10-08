@@ -1,8 +1,9 @@
 ---
-title: "Rigging"
+title: "Rig Collection"
+subtitle: "Maya Rigging"
 description: "Collection of interesting rigs"
-thumbnail_static: /assets/thumbnails/test-thumbnail.png
-thumbnail_animated: /assets/thumbnails/test-thumbnail.gif
+thumbnail_static: /assets/projects/01/thumbnail3.png
+thumbnail_animated: /assets/projects/01/thumbnail4.png
 layout: project
 permalink: /projects/rigging/
 weight: 80 # Order for gallery
