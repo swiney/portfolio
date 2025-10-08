@@ -5,7 +5,7 @@ description: "2D Flipbook-style Animations on 3D Characters"
 thumbnail_static: /assets/projects/04/thumbnail1.png
 thumbnail_animated: /assets/projects/04/thumbnail2.png
 layout: project
-permalink: /projects/runtime-animation-rigging/
+permalink: /projects/flipbook-animation-system/
 weight: 40 # Order for gallery
 ---
 
