@@ -86,29 +86,34 @@ Fish and seaweed geometry are animated with a vertex shader created in Shader Gr
 After seeing traffic/pedestrian lights in Japan, I thought it would be an interesting exercise to encode the whole sequence into a texture and run it using a shader.
 
 The concept is fairly simple:
-* The UV's of the light parts of the relevant traffic light models are scaled to nothing. These parts will be assigned 1 special material, driven by our custom shader.
-* Each individual light that needs to be animated separately should be given a unique Y value in the UV Map.
+{% capture indented-section %}
+* The UV's of the illuminated parts of the relevant traffic light models are scaled to nothing.
+* All illuminated parts are assigned 1 material. This will use our special shader.
+* The UV's of each individual light that needs to be animated separately should be given a unique Y value in the UV Map. These will match up with horizontal rows in the texture.
 * A special texture is created to encode the traffic light sequence. The one used in my animation looks like this:
 
 [![Traffic Signal Sequence Texture](/assets/projects/01/traffic-signals-sequence.png)](/assets/projects/01/traffic-signals-sequence.png)
 
 This is how the encoding works (stretched for clarity):
+[![Traffic Signal Sequence Texture Explanation](/assets/projects/01/traffic-signals-sequence-explained.png)](/assets/projects/01/traffic-signals-sequence-explained.png)
 
-
-
-This is the shader that controls the rende
-
-
-
-
-
-
-
-
-[![Traffic Light Setup](/assets/projects/01/traffic-light-screenshot.png)](/assets/projects/01/traffic-light-screenshot.png)
-
+* Each horizontal row of pixels (Light 1, Light 2, Light 3, ...) is a unique light in the sequence.
+* As the shader transforms the UV's along the X-axis of the texture map, the corresponding parts of the geometry will update according to their respective UV's position in the texture.
+* The shader itself is very simple. It was put together quickly using Shader Graph. All it does is transform the UV's along the X-axis, with the ``_Progress`` value normalized based on the ``_SecondsToRepeat``, which should be set to how long it takes for the traffic lights to complete 1 cycle. The graph:
 
 [![Traffic Light Setup](/assets/projects/01/traffic-light-shadergraph.png)](/assets/projects/01/traffic-light-shadergraph.png)
+{% endcapture %}
+<div class="indented-section">{{ indented-section | markdownify }}</div>
+
+
+
+
+
+<div class="md-spacer-50"></div>
+#### 4. Volume Preserving Ball Rig
+
+Seems like a class exercise right? Well, realtime, no deformers, particle effects
+
 
 
 

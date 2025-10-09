@@ -9,7 +9,7 @@
   --maintext-color: #F6F6F6;
   --dark-text-color: #8a8a8a;
   --page-bg: #222222;
-  --darker-bg: #1c1c1c;
+  --darker-bg: #1a1a1a;
 
 }
 
@@ -51,6 +51,16 @@ body *:not(.fa):not(.fab):not(.fas):not(.far):not(.fal) {
 // .author__urls-wrapper * {
 //   font-family: 'Lexend', sans-serif !important;
 // }
+
+
+code {
+  background-color: #333333;
+  color: var(--accent-color);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
 
 .spacer {
   height: 20px;
@@ -535,6 +545,21 @@ a:hover {
   margin-top: 0rem;
   margin-bottom: 0.75rem;
 }
+
+/* dot points */
+.project-content ul {
+  padding-left: 1rem;  /* default is usually around 2em */
+  margin-left: 0;      /* this helps removeextra offset */
+}
+
+/* images */
+.project-content p a img {
+  display: block;
+  margin: 1rem auto; /* centers horizontally and adds some spacing */
+  max-width: 100%;   /* keeps it responsive */
+  height: auto;
+}
+
 
 .md-spacer-25 { height: 0.25rem; }
 .md-spacer-50 { height: 0.5rem; }
