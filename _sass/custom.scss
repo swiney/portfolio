@@ -1,7 +1,7 @@
 // ------------------------
 // Fonts
 // ------------------------
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;700;800;900&display=swap');
 
 
 :root {
@@ -340,7 +340,7 @@ a:hover {
   position: relative;
   width: 96%;              /* responsive width */
   max-width: 1000px;       /* don't exceed this on wide screens */
-  height: 3px;
+  height: 2px;
   background-color: var(--accent-color);
   margin: 0 auto 1.5rem auto;
 }
@@ -380,8 +380,10 @@ a:hover {
 .project-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 0.0rem;
+  margin-bottom: 0.1rem;
   padding-bottom: 0.0rem;
+  display: inline-block;
+  border-bottom: 3px solid var(--accent-color);
 
   .breadcrumb-link {
     font-size: 0.8rem;
@@ -400,9 +402,15 @@ a:hover {
 }
 
 .project-content {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.6;
+  font-weight: 300;
 }
+
+.project-content strong {
+  font-weight: 800;  /* heavier than normal bold */
+}
+
 
 .project-content iframe {
   width: 100% !important;
@@ -493,4 +501,51 @@ a:hover {
   .proficiencies-container {
     column-count: 1;
   }
+}
+
+
+
+// ------------------------
+// Markdown Styling
+// ------------------------
+.heading-accent {
+  color: var(--accent-color);
+}
+
+/* Style horizontal rules in project content */
+.project-content hr {
+  border: none;
+  height: 1px;
+  background-color: var(--accent-color);
+  margin-bottom: 0.75em;
+  margin-top: 0.0em;
+}
+
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-content p {
+  margin-top: 0rem;
+  margin-bottom: 0.75rem;
+}
+
+.md-spacer-25 { height: 0.25rem; }
+.md-spacer-50 { height: 0.5rem; }
+
+
+.indented-section {
+  background-color: var(--darker-bg);
+//   border: 2px solid var(--accent-color); // accent border
+  padding: 0.5rem;
+  border-radius: 0px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+
 }
