@@ -586,3 +586,12 @@ a:hover {
   height: auto;
   border-radius: 8px; /* optional */
 }
+
+
+
+
+// Fix code block background color
+code,
+pre code {
+  background-color: #263238 !important;
+}
