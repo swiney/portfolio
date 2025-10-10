@@ -112,7 +112,26 @@ This is how the encoding works (stretched for clarity):
 <div class="md-spacer-50"></div>
 #### 4. Volume Preserving Ball Rig
 
-Seems like a class exercise right? Well, realtime, no deformers, particle effects
+Rigging a ball? Seems like a rigging-101 class exercise right? Well there were some challenges I had to solve:
+* No use of deformers. Rig had to be fully bone-based.
+* Had to support hitting some very cartoony non-spherical poses.
+
+The rig is made of 3 bones. All can be freely scaled. The rest of the magic is just in very precise skinning.
+<div class="video-wrapper">
+  <video autoplay loop muted playsinline>
+    <source src="/assets/projects/01/ball-rig.mp4" type="video/mp4">
+  </video>
+</div>
+
+{% capture indented-section %}
+Here are some of the poses I could hit with this rig:
+<div class="video-wrapper">
+  <video autoplay loop muted playsinline>
+    <source src="/assets/projects/01/ball-poses.mp4" type="video/mp4">
+  </video>
+</div>
+{% endcapture %}
+<div class="indented-section">{{ indented-section | markdownify }}</div>
 
 
 
