@@ -136,8 +136,18 @@ Here are some of the poses I could hit with this rig:
 
 
 
+
+
 [loopdeloop-insta]: https://www.instagram.com/loopdeloop_animation
 [texture-animator]: ../flipbook-animation-system/
+
+
+
+
+
+
+
+
 
 
 

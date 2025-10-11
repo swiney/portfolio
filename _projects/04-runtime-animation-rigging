@@ -1,0 +1,17 @@
+---
+title: "Adjustable Characters"
+subtitle: "Runtime Animation Rigging"
+description: "Realtime adjustable characters"
+thumbnail_static: /assets/projects/04/thumbnail1.png
+thumbnail_animated: /assets/projects/04/thumbnail1.png
+layout: project
+permalink: /projects/runtime-animation-rigging/
+weight: 40 # Order for gallery
+---
+
+Characters can be short tall fat skinny whatever
+
+
+Link: [text][linkref]
+
+[linkref]: www.google.com

@@ -2,8 +2,8 @@
 title: "Clockwork Spider"
 subtitle: "Procedural Animation"
 description: "Procedurally animated clockwork spider"
-thumbnail_static: /assets/projects/02/thumbnail3.png
-thumbnail_animated: /assets/projects/02/thumbnail4.png
+thumbnail_static: /assets/projects/02/thumbnail1.png
+thumbnail_animated: /assets/projects/02/thumbnail2.png
 layout: project
 permalink: /projects/procedural-animation/
 weight: 20 # Order for gallery
@@ -292,16 +292,16 @@ This has also been ported to run on mobile, so if you ever see me in person, mak
 
 
 
+{% capture indented-section %}
+# Clockwork Scorpion
+{: .heading-accent }
+------------
+I'm now working on a *"sequel"* to the spider. A Scorpion. This model is many times more complicated, with a lot of moving parts. The scorpion will eventually use the procedural animation system as well. Here are some sneak previews:
 
-sequel is clockwork scorpion.
+[![Clockwork Scorpion Render1](/assets/projects/02/clockwork-scorpion-render1.png)](/assets/projects/02/clockwork-scorpion-render1.png)
+[![Clockwork Scorpion Render2](/assets/projects/02/clockwork-scorpion-render2.png)](/assets/projects/02/clockwork-scorpion-render2.png)
+[![Clockwork Scorpion Render3](/assets/projects/02/clockwork-scorpion-render3.png)](/assets/projects/02/clockwork-scorpion-render3.png)
 
-many times more complicated.
-
-rigging "complete"
-will have procedureal animatoin too
-
-but not quite ready for prime time
-
-
-
+{% endcapture %}
+<div class="indented-section">{{ indented-section | markdownify }}</div>
 
