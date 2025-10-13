@@ -7,7 +7,6 @@ thumbnail_animated: /assets/projects/03/thumbnail2.png
 layout: project
 permalink: /projects/flipbook-animation-system/
 weight: 30 # Order for gallery
-coming_soon: true
 ---
 
 ### What is it?
@@ -66,22 +65,16 @@ Here's a demo showing how easy the setup process is in Maya:
 {% capture indented-section %}
 ### Flipbook style mesh swapping
 
-For my [Loopdeloop animations](../loopdeloop/), I wanted to also be able to do frame-by-frame mesh swapping.
-
-
+For my [Loopdeloop animations](../loopdeloop/), I also wanted frame-by-frame mesh swapping. So I repurposed the Flipbook Animation System to also work with geometry. Combining this with normal Translate/Rotate/Scale animations on the individual parts leads to what I think is something very appealing.
 
 [![Mesh Swapping Screenshot](/assets/projects/03/flipbook-animator-meshswap.png)](/assets/projects/03/flipbook-animator-meshswap.png)
-
-
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
 
 
-
-
-
-
+{% capture indented-section %}
+Further examples:
 
 <div class="video-wrapper">
   <video autoplay loop muted playsinline>
@@ -89,6 +82,12 @@ For my [Loopdeloop animations](../loopdeloop/), I wanted to also be able to do f
   </video>
 </div>
 
+<div class="video-wrapper">
+  <video autoplay loop muted playsinline>
+    <source src="/assets/projects/03/kid_anim_basketball_trick_s.mp4" type="video/mp4">
+  </video>
+</div>
 
 
-
+{% endcapture %}
+<div class="indented-section">{{ indented-section | markdownify }}</div>
