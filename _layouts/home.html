@@ -63,6 +63,12 @@ author_profile: false
             <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
           {% endunless %}
 
+          <!-- COMING SOON Banner. Configure in Page Front Matter -->
+          {% if project.coming_soon %}
+          <div class="thumb-overlay"></div>
+          <div class="coming-soon-banner">COMING SOON</div>
+          {% endif %}
+
           <div class="title-overlay">
             <div class="subtitle">{{ project.subtitle }}</div>
             <div class="title">{{ project.title }}</div>

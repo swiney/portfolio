@@ -2,11 +2,12 @@
 title: "Character Customisation Systems"
 subtitle: "Maya and Unity Toolset"
 description: "Customisable 3D Character System"
-thumbnail_static: /assets/projects/05/thumbnail1.png
-thumbnail_animated: /assets/projects/05/thumbnail2.png
+thumbnail_static: /assets/projects/04/thumbnail1.png
+thumbnail_animated: /assets/projects/04/thumbnail1.png
 layout: project
 permalink: /projects/character-customisation-systems/
-weight: 50 # Order for gallery
+weight: 40 # Order for gallery
+coming_soon: true
 ---
 
 avatar customisation toolset

@@ -207,6 +207,41 @@ a:hover {
   margin-bottom: -0.2rem;
 }
 
+
+// COMING SOON Banner and Overlay
+.coming-soon-banner {
+  position: absolute;
+  top: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  background: var(--page-bg);
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.3rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  pointer-events: none;
+  z-index: 3; /* <-- higher than overlay */
+  opacity: 0.9;
+}
+.thumb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* adjustable darkness */
+  z-index: 2;
+  pointer-events: none; /* so hover animations still work */
+}
+
+
+
+
 // =========================
 // Description box
 // =========================
@@ -250,7 +285,6 @@ a:hover {
   margin-right: -0.5rem;
   margin-bottom: -0.5rem;
 }
-
 
 .project-card:hover .project-description {
   background-color: var(--accent-color);

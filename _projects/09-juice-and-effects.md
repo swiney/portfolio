@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/01/thumbnail4.png
 layout: project
 permalink: /projects/effects/
 weight: 90 # Order for gallery
+coming_soon: true
 ---
 
 avatar customisation toolset
