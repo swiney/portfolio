@@ -1,11 +1,10 @@
 ---
 title: "Paper Plague"
 subtitle: "Game"
-description: "game"
-thumbnail_static: /assets/projects/01/thumbnail3.png
-thumbnail_animated: /assets/projects/01/thumbnail4.png
+description: "Cute platformer where you play as a roll of Toilet Paper!<br><br>Avoid the viruses, save your friends, and jump as high as possible!"
+thumbnail_static: /assets/projects/10/thumbnail1.png
+thumbnail_animated: /assets/projects/10/thumbnail2.png
 layout: project
 permalink: /projects/paper-plague/
-weight: 100 # Order for gallery
-coming_soon: true
+weight: 45 # Order for gallery
 ---
