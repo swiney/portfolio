@@ -13,32 +13,13 @@ weight: 40 # Order for gallery
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## What is it?
 
 The ***Character Customisation System*** is a suite of tools designed to manage highly extensible avatar characters with hundreds of customisation options. The toolset addressed major production bottlenecks, enabled artists and designers to work more independently and made a lot of features feasible that would otherwise have been out of reach due to time constraints and/or technical limitations.
 
 I was responsible for all design/development of Maya toolsets in this system, and some of the Unity tools.
 
-
+![blurry screenshot of tools](/assets/projects/04/tools-screenshot.png)
 
 
 
@@ -52,7 +33,7 @@ From the start of production, our team had identified that a highly customisable
 
 In addition to the above, a highly extensible character was necessary as we forcasted huge amounts of storytelling requiring a host of various types of characters/outfits.
 
-
+{% include captioned_image.html src="/assets/projects/04/ingame-customisation.png" alt="Ingame Customisation" caption="In-game Character Customisation screen" %}
 
 
 
@@ -120,6 +101,8 @@ To address this, I built a toolset in Maya that:
 * QA workload was reduced as checks were automated.
 * Reduced anxiety throughout the team whenever we needed to make updates to the outfit catalogue.
 
+{% include captioned_image.html src="/assets/projects/04/outfit-exporter.png" alt="Outfit Exporter Toolset" caption="Screenshot of the Outfit Authoring Management Tool" %}
+
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
 
@@ -131,13 +114,18 @@ To address this, I built a toolset in Maya that:
 {% capture indented-section %}
 ### Artist driven NPC customisation
 
-Various NPC's in the game world needed custom outfit/customisation combinations. Eg: Tom, the cowboy from the farm story arc was a dark-skinned boy with blue eyes, orange hair, and wore a specific outfit. This was all pre-defined somewhere in the codebase and inaccessible to artists to change so they were often set-and-forget.
+Various NPC's in the game world needed custom outfit/customisation combinations. Eg: Jane, the cowgirl from the farm story arc was a fair-skinned girl with brown eyes, red hair, and wore a specific outfit. This was all pre-defined somewhere in the codebase and inaccessible to artists to change so they were often set-and-forget.
+
+{% include captioned_image.html src="/assets/projects/04/cowgirl.png" alt="Jane, the Cowgirl" caption="Jane, the cowgirl" %}
+
 
 If there was a shift in visual needs, the process to change the look of the NPC was very involved — We would need to imagine the outfit that was desired, find the equivalent code value, edit the definition for that character, recompile and check at runtime. And for good reason, it was often discouraged for artists to make code changes.
 
 This was fine when we only had a few NPCs but became unmaintainable very quickly as the cast grew. Artists also essentially had no space to experiment or update NPCs if visual needs shifted.
 
 To address this, I devised a simple system whereby artists could customise outfits on the main character as they were authoring the art/animation content in Maya. These customised characters could then be **exported as .JSON assets** and assigned in Unity without developer intervention. This freed up programmers from distraction, and allowed artists the freedom to update NPCs as they saw fit without ***"being scared of code changes"***.
+
+[![Mesh Swapping Screenshot](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
@@ -169,134 +157,3 @@ In addition, the outfits would be fully keyframable. That way, each frame could 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-[![Outfit Saver Toolset](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
-
-SPLIT
-
-[![Mesh Swapping Screenshot](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-------------
-
-------------
-
-------------
-
-------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### What is it?
-
-A main character I was managing had the following needs:
-* 1 generic character rig that could be used for boys and girls.
-* Customisable skin color, eye color, hair color.
-* Customisable hair styles. Some are exclusive to the boy or girl variant, some are useable by both.
-* Potentially hundreds of outfit options across several categories (hats, accessories, shirts, jackets, shorts, pants, skirts, shoes, socks, ...)
-
-The systems around this would see daily use by various people, so the following was also necessary:
-* Ease of use and expansion of outfits/customisation options by artists/animators without tech input.
-* Management by designers who do not have access to our authoring tools or the engine (using Google Sheets and other proprietary tools).
-* Management of assets for use in-engine and non-realtime purposes (print, marketing, trailers, etc).
-
-
-# The Tools
-{: .heading-accent }
-------------
-
-{% capture indented-section %}
-### Artist defined outfits
-A project I was working on required countless pre-defined variations of the main character. Hard-coding outfit values into these uses cases very quickly became unmaintainable, especially as visual needs were constantly shifting. So I devised a simple system whereby the artists could customise the outfits on the main character as they were authoring the art/animation content in Maya. These customised characters could then be exported as .json assets and assigned in Unity without developer intervention.
-
-[![Mesh Swapping Screenshot](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
-
-As new outfit options were constantly being created, this toolset was also able to:
-* Export new/updated outfit options directly into the Unity Project, along with automatically generated icons.
-* Update a Google Sheet designers were using as the database for outfit related data.
-
-{% endcapture %}
-<div class="indented-section">{{ indented-section | markdownify }}</div>
-
-
-
-{% capture indented-section %}
-### Outfit Keyframing
-To support a project requiring hundreds of character renders, I devised a toolset to allow artists to easily swap between different characters/outfits. This could then be keyframed.
-
-Scenes would have several characters on-screen at once, and each frame would be a new render. Artists were able to freely step through the frames and change the rig to any character they wanted. This dramatically sped up workflow when dealing with hundreds of poses.
-
-<div class="video-wrapper">
-  <video loop muted playsinline controls>
-    <source src="/assets/projects/04/outfit-keyframing-demo.mp4" type="video/mp4">
-  </video>
-</div>
-{% endcapture %}
-<div class="indented-section">{{ indented-section | markdownify }}</div>
-
-
-
-
-Outfit Changer
-
-
-Charcater switcher
-
-
-JSON Outfits
-
-The Rig
-
-The Shader
-
-
-
-
-
-
-
-
-
-{% capture indented-section %}
-
-
-{% endcapture %}
-<div class="indented-section">{{ indented-section | markdownify }}</div>

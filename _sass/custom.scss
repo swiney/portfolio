@@ -629,3 +629,28 @@ code,
 pre code {
   background-color: #263238 !important;
 }
+
+
+
+
+// ------------------------
+// Captioned Images
+// ------------------------
+.image-with-caption {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0.0rem auto auto;
+}
+.image-with-caption img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 0.0rem;
+}
+.image-with-caption figcaption {
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 0.1rem;
+  font-style: italic;
+}
