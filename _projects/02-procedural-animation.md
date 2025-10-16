@@ -1,7 +1,7 @@
 ---
 title: "Clockwork Spider"
 subtitle: "Procedural Animation"
-description: "Procedurally animated clockwork spider"
+description: "Procedurally animated clockwork spider + Sneak peak at something new :)"
 thumbnail_static: /assets/projects/02/thumbnail1.png
 thumbnail_animated: /assets/projects/02/thumbnail2.png
 layout: project

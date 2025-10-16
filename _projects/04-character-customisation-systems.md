@@ -1,7 +1,7 @@
 ---
 title: "Character Customisation Systems"
 subtitle: "Maya and Unity Toolset"
-description: "Systems for on-the-fly outfit/character swapping. Full character customisation"
+description: "Breakdown of an extensive character customisation system and the associated tools."
 thumbnail_static: /assets/projects/04/thumbnail1.png
 thumbnail_animated: /assets/projects/04/thumbnail2.png
 layout: project
@@ -42,7 +42,7 @@ In addition to the above, a highly extensible character was necessary as we forc
 # The Character Rig
 {: .heading-accent }
 ------------
-Before we dive into the toolsets, here's a bit about the actual master character rig.
+Before we dive into the toolsets, here's a bit about the actual master character rig that I created:
 
 | **Technical Requirement** | **Solution** |
 | Unified rig to streamline workflow and share animations | 1 master rig supports boy + girl characters. Non-unique parts are swappable (eg: Boy's limbs are slightly thicker. Girl has longer eye lashes) |
