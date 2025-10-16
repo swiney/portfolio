@@ -90,6 +90,85 @@ author_profile: false
 
 
 
+
+
+
+
+
+
+
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+<!-- Separator -->
+<section class="selected-works">
+  <h2 class="section-title">Gallery</h2>
+  <div class="title-separator">
+    <span class="diamond"></span>
+  </div>
+</section>
+
+
+
+<script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
+
+<section class="gallery-section">
+  <div class="gallery-grid">
+    {% for item in site.data.gallery %}
+      {% assign thumb = item.thumbnail | default: item.src %}
+      <div class="gallery-item"
+          {% if item.description %}data-description="{{ item.description }}"{% endif %}
+          {% if item.link %}data-link="{{ item.link }}"{% endif %}
+          data-type="{{ item.type }}"
+          {% if item.src %}data-src="{{ item.src }}"{% endif %}
+          {% if item.embed %}data-embed="{{ item.embed | escape }}"{% endif %}>
+
+        {% if item.type == "image" %}
+          <img src="{{ item.thumbnail | default: item.src }}" alt="{{ item.alt | escape }}">
+        {% elsif item.type == "video" %}
+          <video autoplay loop muted playsinline poster="{{ item.thumbnail }}">
+            <source src="{{ item.src }}" type="video/mp4">
+          </video>
+        {% elsif item.type == "embed" %}
+          <img src="{{ item.thumbnail }}" alt="Video thumbnail">
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+
+<!-- Lightbox Markup -->
+<!-- Lightbox Markup -->
+<div id="gallery-lightbox" class="lightbox">
+  <span id="lightbox-close">&times;</span>
+
+  <img id="lightbox-image" style="display:none;">
+  
+  <video id="lightbox-video" controls style="display:none;">
+    <source id="lightbox-video-src" src="" type="video/mp4">
+  </video>
+  
+  <div id="lightbox-embed" class="lightbox-embed" style="display:none;"></div>
+
+  <div id="lightbox-caption"></div>
+  <button id="lightbox-prev" class="lightbox-arrow">&#10094;</button>
+  <button id="lightbox-next" class="lightbox-arrow">&#10095;</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="spacer"></div>
 <div class="spacer"></div>
 <!-- Separator -->
@@ -99,9 +178,6 @@ author_profile: false
     <span class="diamond"></span>
   </div>
 </section>
-
-
-
 
 
 <div class="proficiencies">
