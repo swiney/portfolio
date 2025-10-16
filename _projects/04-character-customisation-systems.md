@@ -37,18 +37,21 @@ In addition to the above, a highly extensible character was necessary as we forc
 
 
 
+
 <br>
-## Technical Requirements
+# The Character Rig
+{: .heading-accent }
+------------
+Before we dive into the toolsets, here's a bit about the actual master character rig.
 
-The main avatar character had the following needs:
-* 1 generic character rig that could be used for boy and girl variants.
-* Customisable skin color, eye color, hair color.
-* Customisable hair styles. Some are exclusive to the boy or girl variant, some are useable by both.
-* Potentially hundreds of outfit options across several categories (hats, accessories, shirts, jackets, shorts, pants, skirts, shoes, socks, ...)
-* Low runtime cost: The game could possibly render up to 20 characters concurrently, on circa 2015 mid-range mobile devices.
+| **Technical Requirement** | **Solution** |
+| Unified rig to streamline workflow and share animations | 1 master rig supports boy + girl characters. Non-unique parts are swappable (eg: Boy's limbs are slightly thicker. Girl has longer eye lashes) |
+| Customisable skin/eye/hair color | Shader-based color swapping on channel-packed textures. |
+| Hundreds of outfit options across several categories | Majority of outfit variations are texture-based. |
+| Low runtime cost. Up to 20 characters rendered onscreen concurrently, on circa 2015 mid-range mobile devices | [Specialised Efficient Facial Rig](../flipbook-animation-system/). All deformations are joint-based. Extensive profiling. |
 
 
-
+{% include captioned_image.html src="/assets/projects/04/kid-rig.png" alt="Screenshot of Master Rig" caption="The Rig that powered hundreds of animations and thousands of outfit of combinations." %}
 
 
 <br>
@@ -60,7 +63,7 @@ Given such a huge system, it was only natural that problems came up during produ
 
 * ***"No one wants to make more outfits because it's so annoying"*** : The process of adding new outfit variations was slow, error prone, and required multiple people across art/design/programming. The task was so daunting that we just didn't create anymore outfits.
 
-* **Outfit Definitions**: Pre-defining a character's outfit for specific uses in-game was done by a programmer. It was difficult for the creative team to experiment.
+* **Outfit Definitions**: Defining an NPC's look and outfit was done by a programmer. It was difficult for the creative team to experiment.
 
 * **Slow outfit customisation outside of the engine**: Customising the character's outfit in Maya for use outside of the engine took so many clicks, it became untenable when we had to make hundreds of renders.
 
@@ -107,25 +110,35 @@ To address this, I built a toolset in Maya that:
 <div class="indented-section">{{ indented-section | markdownify }}</div>
 
 
- 
+
 
 <br>
 
 {% capture indented-section %}
 ### Artist driven NPC customisation
 
-Various NPC's in the game world needed custom outfit/customisation combinations. Eg: Jane, the cowgirl from the farm story arc was a fair-skinned girl with brown eyes, red hair, and wore a specific outfit. This was all pre-defined somewhere in the codebase and inaccessible to artists to change so they were often set-and-forget.
+Many NPC's in the game world needed custom outfit/customisation combinations.
+
+Eg: Jane, the cowgirl from the farm story arc was a fair-skinned girl with brown eyes, red hair, and wore a specific outfit. This was all hardcoded.
 
 {% include captioned_image.html src="/assets/projects/04/cowgirl.png" alt="Jane, the Cowgirl" caption="Jane, the cowgirl" %}
 
+**Original workflow issues:**
 
-If there was a shift in visual needs, the process to change the look of the NPC was very involved — We would need to imagine the outfit that was desired, find the equivalent code value, edit the definition for that character, recompile and check at runtime. And for good reason, it was often discouraged for artists to make code changes.
+* NPC appearances hardcoded and inaccessible to artists. Updating visuals required:
+  * Locating correct code values.
+  * Crossmatching asset names with code definitions.
+  * Updating code, recompiling and checking the outfit at runtime.
+* Non-programmers were discouraged from making changes.
+* With a growing cast, this process became unmaintainable.
 
-This was fine when we only had a few NPCs but became unmaintainable very quickly as the cast grew. Artists also essentially had no space to experiment or update NPCs if visual needs shifted.
+**Solution:**
 
-To address this, I devised a simple system whereby artists could customise outfits on the main character as they were authoring the art/animation content in Maya. These customised characters could then be **exported as .JSON assets** and assigned in Unity without developer intervention. This freed up programmers from distraction, and allowed artists the freedom to update NPCs as they saw fit without ***"being scared of code changes"***.
+To address this, I devised a simple system whereby artists could customise characters as they were authoring the art/animation content in Maya.
 
-[![Mesh Swapping Screenshot](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
+These customised characters were then exported as .JSON assets and assigned in Unity without developer intervention. This freed up programmers from distraction, and allowed artists the freedom to update NPCs as they saw fit without being *"scared of code changes"*.
+
+[![Outfit Saver Tool](/assets/projects/04/outfit-saver-tools.png)](/assets/projects/04/outfit-saver-tools.png)
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
