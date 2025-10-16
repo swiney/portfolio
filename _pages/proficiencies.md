@@ -6,7 +6,7 @@ layout: null
 ## Maya
 - Tools/Pipeline Dev/Scripting (Python, MEL)
   - Rigging Tools
-  - Pipeline management and integration with external programs.
+  - Pipeline management and integration with external programs
   - Bespoke solutions
   - Ad-hoc scripting
   - Workflow streamlining
@@ -31,9 +31,9 @@ layout: null
 
 <div class="skill-block" markdown="1">
 ## Technical
-- Building computers.
-- Computer hardware troubleshooting.
-- Quick learner of new software/technologies.
+- Building computers
+- Computer hardware troubleshooting
+- Quick learner of new software/technologies
 </div>
 
 <div class="skill-block" markdown="1">
@@ -41,11 +41,7 @@ layout: null
 - Asset management and integration
 - Tools development (Editor/Runtime)
 - VFX, Particles, Shaders (HLSL, Shadergraph, Compute)
-- Prototyping, Gameplay Programming
-</div>
-
-<div class="skill-block" markdown="1">
-## Systems Planning
+- Prototyping, Gameplay Programming, Systems Planning
 - Procedural Generation
 - Animation Systems
   - Mecanim
