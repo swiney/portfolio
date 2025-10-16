@@ -1,36 +1,94 @@
+# Loopdeloop
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/thumbnails/thumbnail-boat.png
+  thumbnail: /assets/thumbnails/thumbnail-boat.jpg
   alt: "Are we there yet?"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/918307020?h=c3df223ba4&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/thumbnails/thumbnail-ball.png
+  thumbnail: /assets/thumbnails/thumbnail-ball.jpg
   alt: "Highball"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/928752483?h=6353728b31&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/thumbnails/thumbnail-march.png
+  thumbnail: /assets/thumbnails/thumbnail-march.jpg
   alt: "Radetzky"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
+# Clockwork Scorpion
 - type: image
   src: /assets/projects/02/clockwork-scorpion-render1.png
-  thumbnail: /assets/projects/02/clockwork-scorpion-render1.png
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion1.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
 - type: image
   src: /assets/projects/02/clockwork-scorpion-render2.png
-  thumbnail: /assets/projects/02/clockwork-scorpion-render2.png
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion2.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
 - type: image
   src: /assets/projects/02/clockwork-scorpion-render3.png
-  thumbnail: /assets/projects/02/clockwork-scorpion-render3.png
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion3.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
+# Clockwork Spider
+- type: image
+  src: /assets/gallery/clockwork-spider-front.jpg
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-front.jpg
+  alt: Clockwork Spider
+  description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+
+- type: image
+  src: /assets/gallery/clockwork-spider-side.jpg
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-side.jpg
+  alt: Clockwork Spider
+  description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+
+- type: image
+  src: /assets/gallery/clockwork-spider-top.jpg
+  thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-top.jpg
+  alt: Clockwork Spider
+  description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+
+# M107
+- type: image
+  src: /assets/gallery/barrett-m107-render.jpg
+  thumbnail: /assets/thumbnails/thumbnail-barrett.jpg
+  alt: Barrett M107 Render
+  description: "Fully rigged rifle with all internal mechanisms recreated accurately. See <a href='/projects/m107'>the project page</a> for more details."
+
+# Preying Mantis
+- type: embed
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/80243124?h=af185939f6" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/thumbnails/thumbnail-preying-mantis.jpg
+  alt: "Preying Mantis"
+  description: "'Preying Mantis'"
+
+# Cat Rig
+- type: video
+  src: /assets/gallery/cat-dynamic-rig.mp4
+  thumbnail: /assets/thumbnails/thumbnail-cat-rig.jpg
+  description: Cat Rig with dynamically driven body parts for maximum cartooniness.
+
+# Shooty Ballz
+- type: video
+  src: /assets/gallery/shooty-ballz-1.mp4
+  thumbnail: /assets/thumbnails/thumbnail-shooty-ballz.jpg
+  description: "Top 20 GMTK Game Jam entry, Shooty Ballz. See <a href='https://youtu.be/RGeAkU2wu4o?t=1081'>Mark Brown's segment about this entry.</a>"
+
+# Crystal Lighting Test
+- type: video
+  src: /assets/gallery/sketchy-lighting.mp4
+  thumbnail: /assets/thumbnails/thumbnail-sketchy-lighting.jpg
+  description: "Custom Shader: Stylised Sketchy Lighting"
+
+# Holo Card
+- type: video
+  src: /assets/gallery/holo-card.mp4
+  thumbnail: /assets/thumbnails/thumbnail-holo-card.jpg
+  description: "Custom Shader: Holographic Card effect is mapped to phone gyroscope for realistic feel."
