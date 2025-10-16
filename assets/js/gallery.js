@@ -5,13 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoSrcEl = document.getElementById('lightbox-video-src');
   const captionEl = document.getElementById('lightbox-caption');
 
-  // We'll inject the iframe here when needed
-  let embedContainer = document.createElement('div');
-  embedContainer.id = 'lightbox-embed';
-  lightbox.insertBefore(embedContainer, captionEl);
+  // Find the existing embed container or create it (and ensure it has the right class)
+  let embedContainer = document.getElementById('lightbox-embed');
+  if (!embedContainer) {
+    embedContainer = document.createElement('div');
+    embedContainer.id = 'lightbox-embed';
+    embedContainer.className = 'lightbox-embed';
+    lightbox.insertBefore(embedContainer, captionEl);
+  } else {
+    // make sure it has the CSS class used by your stylesheet
+    if (!embedContainer.classList.contains('lightbox-embed')) {
+      embedContainer.classList.add('lightbox-embed');
+    }
+  }
 
   const items = Array.from(document.querySelectorAll('.gallery-item'));
   let currentIndex = 0;
+
+  function decodeHtmlEntities(encoded) {
+    // decode HTML entities if the YAML was escaped into an attribute
+    const txt = document.createElement('textarea');
+    txt.innerHTML = encoded;
+    return txt.value;
+  }
 
   function clearLightboxContent() {
     imgEl.style.display = 'none';
@@ -30,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = items[currentIndex];
     const type = item.dataset.type;
     const src = item.dataset.src;
-    const embedHtml = item.dataset.embed;
+    let embedHtml = item.dataset.embed || '';
     const description = item.dataset.description || '';
 
     if (type === 'image') {
@@ -41,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
       videoEl.load();
       videoEl.style.display = 'block';
     } else if (type === 'embed') {
+      // If the embed was stored escaped in data-embed, decode it
+      embedHtml = decodeHtmlEntities(embedHtml);
+
+      // Remove width/height attributes and inline style attributes to let CSS manage sizing
+      embedHtml = embedHtml.replace(/(width|height)=["']\d+["']/gi, '')
+                           .replace(/style=["'][^"']*["']/gi, '');
+
+      // Inject cleaned iframe HTML into the existing .lightbox-embed container
       embedContainer.innerHTML = embedHtml;
       embedContainer.style.display = 'block';
     }

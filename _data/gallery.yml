@@ -1,68 +1,36 @@
-- type: image
-  src: /assets/projects/01/traffic-light-screenshot.png
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  alt: Sample Image
-  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
-
-- type: video
-  src: /assets/projects/01/ball-poses.mp4
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  description: This is a looping demo video
-
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/projects/01/thumbnail3.png
-  alt: "Vimeo Video"
-  description: "Check out this Vimeo video."
-
-- type: image
-  src: /assets/projects/01/traffic-light-screenshot.png
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  alt: Sample Image
-  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
-
-- type: video
-  src: /assets/projects/01/ball-poses.mp4
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  description: This is a looping demo video
+  thumbnail: /assets/thumbnails/thumbnail-boat.png
+  alt: "Are we there yet?"
+  description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
 - type: embed
-  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/projects/01/thumbnail3.png
-  alt: "Vimeo Video"
-  description: "Check out this Vimeo video."
-
-- type: image
-  src: /assets/projects/01/traffic-light-screenshot.png
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  alt: Sample Image
-  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
-
-- type: video
-  src: /assets/projects/01/ball-poses.mp4
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  description: This is a looping demo video
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/918307020?h=c3df223ba4&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/thumbnails/thumbnail-ball.png
+  alt: "Highball"
+  description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
 - type: embed
-  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/projects/01/thumbnail3.png
-  alt: "Vimeo Video"
-  description: "Check out this Vimeo video."
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/928752483?h=6353728b31&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/thumbnails/thumbnail-march.png
+  alt: "Radetzky"
+  description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
 
 - type: image
-  src: /assets/projects/01/traffic-light-screenshot.png
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  alt: Sample Image
-  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
+  src: /assets/projects/02/clockwork-scorpion-render1.png
+  thumbnail: /assets/projects/02/clockwork-scorpion-render1.png
+  alt: Clockwork Scorpion
+  description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
-- type: video
-  src: /assets/projects/01/ball-poses.mp4
-  thumbnail: /assets/projects/01/traffic-light-screenshot.png
-  description: This is a looping demo video
+- type: image
+  src: /assets/projects/02/clockwork-scorpion-render2.png
+  thumbnail: /assets/projects/02/clockwork-scorpion-render2.png
+  alt: Clockwork Scorpion
+  description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
-- type: embed
-  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
-  thumbnail: /assets/projects/01/thumbnail3.png
-  alt: "Vimeo Video"
-  description: "Check out this Vimeo video."
+- type: image
+  src: /assets/projects/02/clockwork-scorpion-render3.png
+  thumbnail: /assets/projects/02/clockwork-scorpion-render3.png
+  alt: Clockwork Scorpion
+  description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
 
