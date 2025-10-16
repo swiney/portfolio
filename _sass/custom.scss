@@ -591,6 +591,35 @@ a:hover {
 .gallery-item:hover video {
   transform: scale(1.02);
 }
+
+/* Video thumbnail */
+.gallery-video-thumb {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-video-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0.8;
+  pointer-events: none;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item:hover .play-overlay {
+  opacity: 1;
+}
+
 /* Lightbox styles */
 .gallery-lightbox {
   display: none;

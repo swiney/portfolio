@@ -9,6 +9,56 @@
   thumbnail: /assets/projects/01/traffic-light-screenshot.png
   description: This is a looping demo video
 
+- type: embed
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/projects/01/thumbnail3.png
+  alt: "Vimeo Video"
+  description: "Check out this Vimeo video."
+
+- type: image
+  src: /assets/projects/01/traffic-light-screenshot.png
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  alt: Sample Image
+  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
+
+- type: video
+  src: /assets/projects/01/ball-poses.mp4
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  description: This is a looping demo video
+
+- type: embed
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/projects/01/thumbnail3.png
+  alt: "Vimeo Video"
+  description: "Check out this Vimeo video."
+
+- type: image
+  src: /assets/projects/01/traffic-light-screenshot.png
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  alt: Sample Image
+  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
+
+- type: video
+  src: /assets/projects/01/ball-poses.mp4
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  description: This is a looping demo video
+
+- type: embed
+  embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
+  thumbnail: /assets/projects/01/thumbnail3.png
+  alt: "Vimeo Video"
+  description: "Check out this Vimeo video."
+
+- type: image
+  src: /assets/projects/01/traffic-light-screenshot.png
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  alt: Sample Image
+  description: "This is **Image 1**. See <a href='/projects/loopdeloop'>here</a> for more details."
+
+- type: video
+  src: /assets/projects/01/ball-poses.mp4
+  thumbnail: /assets/projects/01/traffic-light-screenshot.png
+  description: This is a looping demo video
 
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'

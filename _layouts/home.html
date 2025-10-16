@@ -125,12 +125,11 @@ author_profile: false
 
         {% if item.type == "image" %}
           <img src="{{ item.thumbnail | default: item.src }}" alt="{{ item.alt | escape }}">
-        {% elsif item.type == "video" %}
-          <video autoplay loop muted playsinline poster="{{ item.thumbnail }}">
-            <source src="{{ item.src }}" type="video/mp4">
-          </video>
-        {% elsif item.type == "embed" %}
-          <img src="{{ item.thumbnail }}" alt="Video thumbnail">
+        {% elsif item.type == "video" or item.type == "embed" %}
+          <div class="gallery-video-thumb">
+            <img src="{{ thumb }}" alt="{{ item.alt | escape }}">
+            <div class="play-overlay">&#9658;</div> <!-- Unicode play icon -->
+          </div>
         {% endif %}
       </div>
     {% endfor %}
