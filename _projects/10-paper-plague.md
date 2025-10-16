@@ -7,4 +7,5 @@ thumbnail_animated: /assets/projects/10/thumbnail2.png
 layout: project
 permalink: /projects/paper-plague/
 weight: 45 # Order for gallery
+coming_soon: true
 ---

@@ -575,6 +575,20 @@ a:hover {
   gap: 1rem;
   justify-content: center;
 }
+/* Tablet & mobile breakpoint */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 0.75rem;
+  }
+}
+
+/* Tiny screens if needed (optional) */
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 column for very narrow devices */
+  }
+}
 .gallery-item {
   position: relative;
   cursor: pointer;
