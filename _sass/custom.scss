@@ -730,6 +730,43 @@ a:hover {
 
 
 
+// =========================
+// ERROR 404
+// =========================
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh; /* centers the content vertically */
+  margin-top: 2rem;
+}
+.error-code {
+  font-size: 15rem;
+  font-weight: 900;
+  margin: 0;
+  color: var(--accent-color);
+  animation: pop-in 1s ease-out;
+}
+.error-message {
+  font-size: 3rem;
+  margin-top: 0rem;
+  color: var(--accent-color);
+  letter-spacing: -0.17em; /* tighten the spacing */
+  animation: float 0.15s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+@keyframes pop-in {
+  0% { transform: scale(0.35); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
 
 
 

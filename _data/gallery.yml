@@ -92,3 +92,16 @@
   src: /assets/gallery/holo-card.mp4
   thumbnail: /assets/thumbnails/thumbnail-holo-card.jpg
   description: "Custom Shader: Holographic Card effect is mapped to phone gyroscope for realistic feel."
+
+# RABC Characters
+- type: image
+  src: /assets/gallery/rabc-characters.jpg
+  thumbnail: /assets/thumbnails/thumbnail-rabc-characters.jpg
+  alt: RoyalABC Characters
+  description: "Some of the characters from RoyalABC. I was responsible for all Rigging, and a lot of the modelling and animation."
+
+# Texture Animator
+- type: video
+  src: /assets/projects/03/flipbook-animator-with-ui.mp4
+  thumbnail: /assets/thumbnails/thumbnail-flipbook-system.jpg
+  description: "Custom Flipbook sytle animation system I developed. See <a href='/projects/flipbook-animation-system'>Flipbook Animation System</a> for more details."

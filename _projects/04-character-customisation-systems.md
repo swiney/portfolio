@@ -121,7 +121,7 @@ Many NPC's in the game world needed custom outfit/customisation combinations.
 
 Eg: Jane, the cowgirl from the farm story arc was a fair-skinned girl with brown eyes, red hair, and wore a specific outfit. This was all hardcoded.
 
-{% include captioned_image.html src="/assets/projects/04/cowgirl.png" alt="Jane, the Cowgirl" caption="Jane, the cowgirl" %}
+{% include captioned_image.html src="/assets/projects/04/cowgirl.png" alt="NPCs" caption="Some NPCs" %}
 
 **Original workflow issues:**
 
