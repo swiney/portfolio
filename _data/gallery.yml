@@ -105,3 +105,9 @@
   src: /assets/projects/03/flipbook-animator-with-ui.mp4
   thumbnail: /assets/thumbnails/thumbnail-flipbook-system.jpg
   description: "Custom Flipbook sytle animation system I developed. See <a href='/projects/flipbook-animation-system'>Flipbook Animation System</a> for more details."
+
+# Pong
+- type: video
+  src: /assets/gallery/next-level-pong.mp4
+  thumbnail: /assets/thumbnails/thumbnail-pong.jpg
+  description: "Facing off against the hardest AI in my recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
