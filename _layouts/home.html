@@ -26,8 +26,23 @@ author_profile: false
     I am a force multiplier — I empower creative teams to achieve more than they could have imagined, and enable them to do more, in less time!
   </p>
   <p>
-    Please check out my work!
+    Please check out my work! Contact me at my socials for any questions!
   </p>
+
+    <ul class="social-icons">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% endif %}
+
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label | escape_once | strip }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </ul>
+
 </div>
 
 

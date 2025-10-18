@@ -112,6 +112,33 @@ a:hover {
 
 
 
+// ------------------------
+// Home Intro Social Icons
+// ------------------------
+.home-intro .social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 1rem; /* space between icons */
+  padding: 0;
+  margin-top: 1rem;
+}
+.home-intro .social-icons li {
+  display: inline-flex;
+  align-items: center;
+}
+.home-intro .social-icons a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: var(--dark-text-color);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.home-intro .social-icons a:hover {
+  transform: scale(1.15);
+  color: var(--link-hover-color, var(--accent-color));
+}
+
+
 
 
 
