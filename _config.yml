@@ -22,7 +22,7 @@ title: Sheng's Tech Art Portfolio
 copyright: Sheng Xu
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Technical Artist Portfolio for Sheng Xu. Specializing in Unity, Unity3D, Autodesk Maya, Python, MEL, C#, HLSL, Shadergraph, VFX Graph.
+  Technical Artist Portfolio for Sheng Xu, from Sydney, Australia. Specializing in Unity, Autodesk Maya, Python, MEL, C#, HLSL, Shadergraph, VFX Graph, Particles, Gameplay Programming.
   3D Artist, 3D Animator, Rigging, Game Developer, Programmer, Pipeline TD, VFX Artist, Shaders, Tools Developer.
 twitter_username: username
 github_username: swiney
@@ -58,7 +58,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
   - jekyll-picture-tag

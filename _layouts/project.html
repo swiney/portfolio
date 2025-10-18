@@ -4,9 +4,6 @@ author_profile: true
 classes: wide
 ---
 
-<!-- {{ content }} -->
-
-<!-- Header -->
 <a href="{{ "/" | relative_url }}" class="site-header-link">
   <header class="site-header">
     <img src="/assets/images/header.png" alt="Header">
@@ -16,21 +13,18 @@ classes: wide
 
 
 
-<!-- Project content -->
+
 <div class="project-container">
 
-  <!-- Title with breadcrumb -->
   <h1 class="project-title">
     <a href="{{ '/' | relative_url }}" class="breadcrumb-link">Works &gt;</a>
     {{ page.title }}
   </h1>
 
-  <!-- Subtitle -->
   {% if page.subtitle %}
     <h2 class="project-subtitle">{{ page.subtitle }}</h2>
   {% endif %}
 
-  <!-- Project content -->
   <div class="project-content">
     {{ content }}
   </div>
@@ -38,7 +32,7 @@ classes: wide
 </div>
 
     
-<!-- Separator -->
+
 <div class="spacer"></div>
 <section class="selected-works">
   <div class="title-separator">

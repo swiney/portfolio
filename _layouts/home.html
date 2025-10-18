@@ -1,21 +1,15 @@
 ---
-layout: splash
+layout: default
 author_profile: false
 ---
-{% include head.html %}
 
 
-<!-- HEADER -->
 <header class="site-header">
   <img src="/assets/images/header.png" alt="Header">
   <h1 class="header-title">Sheng Xu</h1>
 </header>
 
 
-
-
-
-<!-- {{ content }} -->
 
 
 <div class="home-intro">
@@ -47,7 +41,6 @@ author_profile: false
 
 
 
-<!-- Separator -->
 <section class="selected-works">
   <h2 class="section-title">Selected Works</h2>
   <div class="title-separator">
@@ -57,13 +50,13 @@ author_profile: false
 
 
 
-<!-- Single Column of project cards -->
+
 <section class="portfolio-gallery">
   <div class="portfolio-list">
     {% assign sorted_projects = site.projects | sort: 'weight' %}
     {% for project in sorted_projects %}
       <a href="{{ project.url | relative_url }}" class="project-card">
-        <!-- Thumbnail on the LEFT now -->
+        
         <div class="project-thumb">
           {% if project.thumbnail_static %}
             <img class="static" src="{{ project.thumbnail_static | relative_url }}" alt="{{ project.title }}">
@@ -75,7 +68,7 @@ author_profile: false
             <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
           {% endunless %}
 
-          <!-- COMING SOON Banner. Configure in Page Front Matter -->
+          
           {% if project.coming_soon %}
           <div class="thumb-overlay"></div>
           <div class="coming-soon-banner">COMING SOON</div>
@@ -87,7 +80,6 @@ author_profile: false
           </div>
         </div>
 
-        
         <div class="project-description">
           <div class="description-content">
             <p class="description-text">{{ project.description }}</p>
@@ -112,7 +104,6 @@ author_profile: false
 
 <div class="spacer"></div>
 <div class="spacer"></div>
-<!-- Separator -->
 <section class="selected-works">
   <h2 class="section-title">Gallery</h2>
   <div class="title-separator">
@@ -140,7 +131,7 @@ author_profile: false
         {% elsif item.type == "video" or item.type == "embed" %}
           <div class="gallery-video-thumb">
             <img src="{{ thumb }}" alt="{{ item.alt | escape }}">
-            <div class="play-overlay">&#9658;</div> <!-- Unicode play icon -->
+            <div class="play-overlay">&#9658;</div>
           </div>
         {% endif %}
       </div>
@@ -150,7 +141,7 @@ author_profile: false
 
 
 
-<!-- Lightbox Markup -->
+<!-- popup lightbox -->
 <div id="gallery-lightbox" class="lightbox">
   <span id="lightbox-close">&times;</span>
 
@@ -181,7 +172,6 @@ author_profile: false
 
 <div class="spacer"></div>
 <div class="spacer"></div>
-<!-- Separator -->
 <section class="selected-works">
   <h2 class="section-title">Proficiencies</h2>
   <div class="title-separator">
