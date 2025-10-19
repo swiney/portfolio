@@ -350,13 +350,12 @@ a:hover {
 // ------------------------
 // Header image adjustments
 // ------------------------
-/* -------- Custom Header -------- */
-/* Wrapper for the header */
 .site-header {
   max-width: 1200px; /* cap width */
   margin: 1rem auto 0 auto;  /* top spacing added here */
   position: relative;
   overflow: hidden;
+  container-type: inline-size; /* Enable container queries */
 
   img {
     width: 100%;
@@ -378,7 +377,9 @@ a:hover {
   line-height: 1.1;
   pointer-events: none;
 
-  font-size: calc(2.45rem + 2%); /* scales with header image container width */
+  /* Scale exactly with container width (which matches image size) */
+  font-size: 4.5cqw; /* 4.5% of container width */
+
 }
 
 
