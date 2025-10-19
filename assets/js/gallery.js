@@ -21,6 +21,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const items = Array.from(document.querySelectorAll('.gallery-item'));
   let currentIndex = 0;
+  let isImageFullSize = false;
+
+  function updateLightboxAlignment() {
+    if (!isImageFullSize) return;
+    
+    const imgWidth = imgEl.offsetWidth;
+    const imgHeight = imgEl.offsetHeight;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // Check each dimension independently
+    const overflowsWidth = imgWidth > viewportWidth;
+    const overflowsHeight = imgHeight > viewportHeight;
+    
+    // Update alignment classes based on overflow
+    if (overflowsWidth) {
+      lightbox.classList.add('overflow-width');
+    } else {
+      lightbox.classList.remove('overflow-width');
+      captionEl.style.top = ''; // Clear inline style
+    }
+    
+    if (overflowsHeight) {
+      lightbox.classList.add('overflow-height');
+    } else {
+      lightbox.classList.remove('overflow-height');
+    }
+    
+    // Check if caption would be off-screen
+    // Account for caption height and some margin
+    const captionHeight = captionEl.offsetHeight || 50; // fallback estimate
+    const totalHeight = imgHeight + captionHeight + 32; // 32px for margins
+    
+    if (totalHeight > viewportHeight) {
+      lightbox.classList.add('caption-fixed');
+      captionEl.style.top = ''; // Clear inline style, use bottom positioning
+    } else {
+      lightbox.classList.remove('caption-fixed');
+      
+      // For wide images that don't overflow vertically, position caption below image
+      if (overflowsWidth && !overflowsHeight) {
+        // Calculate where the bottom of the image is relative to viewport
+        const imgRect = imgEl.getBoundingClientRect();
+        const captionTop = imgRect.bottom + 16; // 16px margin
+        captionEl.style.top = `${captionTop}px`;
+      } else {
+        captionEl.style.top = ''; // Clear for normal flow
+      }
+    }
+  }
 
   function decodeHtmlEntities(encoded) {
     // decode HTML entities if the YAML was escaped into an attribute
@@ -39,8 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
     embedContainer.style.display = 'none';
   }
 
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    clearLightboxContent();
+    // Re-enable body scroll when lightbox is closed
+    document.body.style.overflow = '';
+    // Reset zoom state
+    isImageFullSize = false;
+    lightbox.classList.remove('overflow-width');
+    lightbox.classList.remove('overflow-height');
+    lightbox.classList.remove('hide-arrows');
+    lightbox.classList.remove('caption-fixed');
+    // Clear inline caption positioning
+    captionEl.style.top = '';
+  }
+
   function openLightbox(index) {
     clearLightboxContent();
+    isImageFullSize = false; // Reset zoom state when opening new image
 
     currentIndex = index;
     const item = items[currentIndex];
@@ -52,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (type === 'image') {
       imgEl.src = src;
       imgEl.style.display = 'block';
+      imgEl.classList.remove('full-size');
+      imgEl.style.cursor = 'zoom-in';
     } else if (type === 'video') {
       videoSrcEl.src = src;
       videoEl.load();
@@ -71,6 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     captionEl.innerHTML = description;
     lightbox.classList.add('active');
+    
+    // Disable body scroll when lightbox is open
+    document.body.style.overflow = 'hidden';
   }
 
   items.forEach((item, i) => {
@@ -78,8 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('lightbox-close').addEventListener('click', () => {
-    lightbox.classList.remove('active');
-    clearLightboxContent();
+    closeLightbox();
   });
 
   document.getElementById('lightbox-prev').addEventListener('click', () => {
@@ -92,8 +162,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) {
-      lightbox.classList.remove('active');
-      clearLightboxContent();
+      closeLightbox();
+    }
+  });
+
+  // Toggle image size when clicking on the image
+  imgEl.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent lightbox from closing
+    isImageFullSize = !isImageFullSize;
+    
+    if (isImageFullSize) {
+      imgEl.classList.add('full-size');
+      imgEl.style.cursor = 'zoom-out';
+      lightbox.classList.add('hide-arrows');
+      
+      // Wait for the image to render at full size, then check alignment
+      setTimeout(() => {
+        updateLightboxAlignment();
+      }, 0);
+    } else {
+      imgEl.classList.remove('full-size');
+      imgEl.style.cursor = 'zoom-in';
+      lightbox.classList.remove('overflow-width');
+      lightbox.classList.remove('overflow-height');
+      lightbox.classList.remove('hide-arrows');
+      lightbox.classList.remove('caption-fixed');
+      captionEl.style.top = '';
+    }
+  });
+
+  // Update alignment when window is resized
+  window.addEventListener('resize', () => {
+    if (lightbox.classList.contains('active') && isImageFullSize) {
+      updateLightboxAlignment();
     }
   });
 });

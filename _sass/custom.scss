@@ -703,21 +703,92 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: auto; /* Enable scrolling for full-size images */
 }
+
+/* When image overflows horizontally, align to left */
+.lightbox.overflow-width {
+  align-items: flex-start;
+}
+
+/* When image overflows vertically, align to top */
+.lightbox.overflow-height {
+  justify-content: flex-start;
+}
+
 .lightbox.active {
   display: flex;
 }
+
+/* Close button - cross on circle, fixed at top-right */
+#lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.8rem;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background 0.2s;
+}
+
+#lightbox-close:hover,
+.lightbox-arrow:hover {
+  background: var(--accent-color);
+}
+
 .lightbox img, .lightbox video {
   max-width: 90%;
   max-height: 80%;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
+
+/* Full-size image toggle */
+.lightbox img.full-size {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  cursor: zoom-out;
+}
+
 #lightbox-caption {
   color: #fff;
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 1rem;
+  width: 90%;
+  max-width: 1000px;
+  align-self: center; /* Keep caption centered even when lightbox has overflow-width */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
+
+/* Fix caption position when image overflows width OR caption would be off-screen */
+.lightbox.overflow-width #lightbox-caption,
+.lightbox.caption-fixed #lightbox-caption {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: min(1000px, 100vw);
+  z-index: 10001;
+}
+
+/* When caption would be pushed off-screen vertically, fix it to bottom */
+.lightbox.caption-fixed #lightbox-caption {
+  bottom: 1rem !important;
+  top: auto !important;
+  margin-bottom: 0;
+}
+
 #lightbox-caption a {
   color: var(--accent-color);
   text-decoration: underline;
@@ -732,13 +803,20 @@ a:hover {
   font-size: 2rem;
   cursor: pointer;
   padding: 0.3rem 0.6rem;
+  transition: opacity 0.2s;
 }
+
+/* Hide navigation arrows in full-size mode */
+.lightbox.hide-arrows .lightbox-arrow {
+  display: none;
+}
+
 .lightbox-embed {
   position: relative;
-  width: 100%;
-  max-width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
+  width: 90vw;
+  max-width: 1600px;
+  max-height: 80vh;
+  aspect-ratio: 16 / 9;
 }
 
 .lightbox-embed iframe {
