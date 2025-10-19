@@ -105,9 +105,10 @@ a:hover {
   max-width: 800px;   /* prevent it from stretching too wide */
   margin: 2rem auto;  /* center horizontally */
   color: #f6f6f6;
-  font-size: 0.9rem;
+  font-size: clamp(14px, 0.9rem, 18px);
   line-height: 1.6;
   white-space: normal; /* ensure text wraps */
+  padding: 0 0.8em;
 }
 
 
@@ -508,6 +509,7 @@ a:hover {
   column-gap: 3rem;        /* spacing between columns */
   font-size: 0.8rem;
   color: var(--maintext-color);
+  padding: 0 0.8rem;
 }
 
 /* Headings */
@@ -624,6 +626,7 @@ a:hover {
 .gallery-item video {
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
   display: block;
   border-radius: 6px;
   transition: transform 0.2s ease;
@@ -632,18 +635,6 @@ a:hover {
 .gallery-item:hover img,
 .gallery-item:hover video {
   transform: scale(1.02);
-}
-
-/* Video thumbnail */
-.gallery-video-thumb {
-  position: relative;
-  display: inline-block;
-}
-
-.gallery-video-thumb img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .play-overlay {
@@ -763,8 +754,8 @@ a:hover {
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 1rem;
-  width: 90%;
-  max-width: 1000px;
+  width: auto;
+  max-width: 90%;
   align-self: center; /* Keep caption centered even when lightbox has overflow-width */
   background: rgba(0, 0, 0, 0.7);
   padding: 0.5rem 1rem;
@@ -775,10 +766,6 @@ a:hover {
 .lightbox.overflow-width #lightbox-caption,
 .lightbox.caption-fixed #lightbox-caption {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  max-width: min(1000px, 100vw);
   z-index: 10001;
 }
 
