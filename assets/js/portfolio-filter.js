@@ -30,58 +30,94 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Filter projects based on active tags
   function filterProjects() {
+    let hiddenCount = 0;
+    
     if (activeTags.size === 0) {
       // Show all if no tags selected
       projectCards.forEach(card => {
         card.style.display = '';
       });
-      return;
+    } else {
+      projectCards.forEach(card => {
+        const cardTags = card.getAttribute('data-tags');
+        if (!cardTags) {
+          card.style.display = 'none';
+          hiddenCount++;
+          return;
+        }
+
+        const cardTagArray = cardTags.split(',').map(tag => tag.trim());
+        
+        // Show card if it has ANY of the active tags (OR logic)
+        const hasAnyTag = Array.from(activeTags).some(tag => 
+          cardTagArray.includes(tag)
+        );
+
+        if (hasAnyTag) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+          hiddenCount++;
+        }
+      });
     }
-
-    projectCards.forEach(card => {
-      const cardTags = card.getAttribute('data-tags');
-      if (!cardTags) {
-        card.style.display = 'none';
-        return;
+    
+    // Update hidden works notice
+    const notice = document.getElementById('portfolio-hidden-notice');
+    if (notice) {
+      if (hiddenCount > 0) {
+        notice.style.display = '';
+        notice.querySelector('.hidden-count').textContent = hiddenCount;
+      } else {
+        notice.style.display = 'none';
       }
-
-      const cardTagArray = cardTags.split(',').map(tag => tag.trim());
-      
-      // Show card if it has ANY of the active tags (OR logic)
-      const hasAnyTag = Array.from(activeTags).some(tag => 
-        cardTagArray.includes(tag)
-      );
-
-      card.style.display = hasAnyTag ? '' : 'none';
-    });
+    }
   }
 
   // Filter gallery items based on active tags
   function filterGallery() {
+    let hiddenCount = 0;
+    
     if (activeTags.size === 0) {
       // Show all if no tags selected
       galleryItems.forEach(item => {
         item.style.display = '';
       });
-      return;
+    } else {
+      galleryItems.forEach(item => {
+        const itemTags = item.getAttribute('data-tags');
+        if (!itemTags) {
+          item.style.display = 'none';
+          hiddenCount++;
+          return;
+        }
+
+        const itemTagArray = itemTags.split(',').map(tag => tag.trim());
+        
+        // Show item if it has ANY of the active tags (OR logic)
+        const hasAnyTag = Array.from(activeTags).some(tag => 
+          itemTagArray.includes(tag)
+        );
+
+        if (hasAnyTag) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+          hiddenCount++;
+        }
+      });
     }
-
-    galleryItems.forEach(item => {
-      const itemTags = item.getAttribute('data-tags');
-      if (!itemTags) {
-        item.style.display = 'none';
-        return;
+    
+    // Update hidden works notice
+    const notice = document.getElementById('gallery-hidden-notice');
+    if (notice) {
+      if (hiddenCount > 0) {
+        notice.style.display = '';
+        notice.querySelector('.hidden-count').textContent = hiddenCount;
+      } else {
+        notice.style.display = 'none';
       }
-
-      const itemTagArray = itemTags.split(',').map(tag => tag.trim());
-      
-      // Show item if it has ANY of the active tags (OR logic)
-      const hasAnyTag = Array.from(activeTags).some(tag => 
-        itemTagArray.includes(tag)
-      );
-
-      item.style.display = hasAnyTag ? '' : 'none';
-    });
+    }
   }
 
   // Update button states (for all tag button instances)
@@ -169,4 +205,16 @@ document.addEventListener('DOMContentLoaded', function() {
   updateButtonStates();
   filterProjects();
   filterGallery();
+  
+  // Handle "Show All" links in hidden works notices
+  document.querySelectorAll('.show-all-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      activeTags.clear();
+      updateButtonStates();
+      filterProjects();
+      filterGallery();
+      updateURL();
+    });
+  });
 });
