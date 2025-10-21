@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/01/thumbnail4.png
 layout: project
 permalink: /projects/loopdeloop/
 weight: 10 # Order for gallery
+tags: [animation, rigging, tools]
 ---
 
 Throughout January 2024 - March 2024, I created 3 animations, for consecutive [Loopdeloop][loopdeloop-insta] animation challenges. I set out with the purpose of creating something short and focused, utilising an amalgamation of all my skills, under tight deadlines. I used a mix of Maya and Unity. The final render is a simple recording of the Unity Scene since the animations run in realtime.

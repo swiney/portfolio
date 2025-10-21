@@ -8,6 +8,7 @@ layout: project
 permalink: /projects/shaders/
 weight: 60 # Order for gallery
 coming_soon: true
+tags: []
 ---
 
 *Stay Tuned! Pretty effects, shaders and eye candy is coming soon!*

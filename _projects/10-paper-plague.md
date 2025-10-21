@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/10/thumbnail2.png
 layout: project
 permalink: /projects/paper-plague/
 weight: 45 # Order for gallery
+tags: [game-dev]
 ---
 
 *Stay Tuned! More information about this project is coming soon!*

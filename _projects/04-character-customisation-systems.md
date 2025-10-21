@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/04/thumbnail2.png
 layout: project
 permalink: /projects/character-customisation/
 weight: 40 # Order for gallery
+tags: [rigging, tools]
 ---
 
 

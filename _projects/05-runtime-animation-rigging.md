@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/05/thumbnail1.png
 layout: project
 permalink: /projects/runtime-animation-rigging/
 weight: 50 # Order for gallery
+tags: [rigging]
 ---
 
 *Stay Tuned! A more detailed breakdown of this project is coming soon!*

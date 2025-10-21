@@ -49,13 +49,35 @@ author_profile: false
 </section>
 
 
-
+<script src="{{ '/assets/js/portfolio-filter.js' | relative_url }}"></script>
 
 <section class="portfolio-gallery">
+  <!-- Tag Filter Section -->
+  <div class="portfolio-tags">
+    {% assign all_tags = "" | split: "" %}
+    {% for project in site.projects %}
+      {% if project.tags %}
+        {% for tag in project.tags %}
+          {% unless all_tags contains tag %}
+            {% assign all_tags = all_tags | push: tag %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {% assign sorted_tags = all_tags | sort %}
+    
+    <div class="tag-buttons">
+      {% for tag in sorted_tags %}
+        <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+      {% endfor %}
+      <button class="tag-btn tag-clear" data-tag="all">Show All</button>
+    </div>
+  </div>
+
   <div class="portfolio-list">
     {% assign sorted_projects = site.projects | sort: 'weight' %}
     {% for project in sorted_projects %}
-      <a href="{{ project.url | relative_url }}" class="project-card">
+      <a href="{{ project.url | relative_url }}" class="project-card" data-tags="{{ project.tags | join: ',' }}">
         
         <div class="project-thumb">
           {% if project.thumbnail_static %}
@@ -83,7 +105,13 @@ author_profile: false
         <div class="project-description">
           <div class="description-content">
             <p class="description-text">{{ project.description }}</p>
-            <span class="see-more">...view work</span>
+            <span class="see-more">
+              {% if project.tags and project.tags.size > 0 %}
+                Tags: {{ project.tags | join: ', ' }}
+              {% else %}
+                Tags: (none)
+              {% endif %}
+            </span>
           </div>
         </div>
       </a>

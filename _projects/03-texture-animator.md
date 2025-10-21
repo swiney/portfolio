@@ -7,6 +7,7 @@ thumbnail_animated: /assets/projects/03/thumbnail2.png
 layout: project
 permalink: /projects/flipbook-animation-system/
 weight: 30 # Order for gallery
+tags: [animation, rigging, tools]
 ---
 
 ### What is it?
