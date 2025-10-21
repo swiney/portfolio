@@ -82,9 +82,9 @@ author_profile: false
     
     <div class="tag-buttons">
       {% for tag in sorted_tags %}
-        <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        <button class="tag-btn" data-tag="{{ tag }}"><span>{{ tag }}</span></button>
       {% endfor %}
-      <button class="tag-btn tag-clear" data-tag="all">Show All</button>
+      <button class="tag-btn tag-clear" data-tag="all"><span>Show All</span></button>
     </div>
   </div>
 
@@ -183,9 +183,9 @@ author_profile: false
   
   <div class="tag-buttons">
     {% for tag in sorted_tags %}
-      <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+      <button class="tag-btn" data-tag="{{ tag }}"><span>{{ tag }}</span></button>
     {% endfor %}
-    <button class="tag-btn tag-clear" data-tag="all">Show All</button>
+    <button class="tag-btn tag-clear" data-tag="all"><span>Show All</span></button>
   </div>
 </div>
 
