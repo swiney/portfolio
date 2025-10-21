@@ -31,14 +31,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Filter projects based on active tags
   function filterProjects() {
     let hiddenCount = 0;
+    let visibleIndex = 0;
     
     if (activeTags.size === 0) {
       // Show all if no tags selected
-      projectCards.forEach(card => {
+      projectCards.forEach((card, index) => {
+        const wasHidden = card.style.display === 'none';
         card.style.display = '';
+        
+        if (wasHidden) {
+          card.style.opacity = '0';
+          card.classList.remove('fade-in');
+          void card.offsetWidth; // Force reflow
+          card.style.animationDelay = `${visibleIndex * 0.04}s`;
+          card.classList.add('fade-in');
+          visibleIndex++;
+        }
       });
     } else {
-      projectCards.forEach(card => {
+      projectCards.forEach((card, index) => {
         const cardTags = card.getAttribute('data-tags');
         if (!cardTags) {
           card.style.display = 'none';
@@ -54,9 +65,21 @@ document.addEventListener('DOMContentLoaded', function() {
         );
 
         if (hasAnyTag) {
+          const wasHidden = card.style.display === 'none';
           card.style.display = '';
+          
+          if (wasHidden) {
+            card.style.opacity = '0';
+            card.classList.remove('fade-in');
+            void card.offsetWidth; // Force reflow
+            card.style.animationDelay = `${visibleIndex * 0.04}s`;
+            card.classList.add('fade-in');
+            visibleIndex++;
+          }
         } else {
           card.style.display = 'none';
+          card.classList.remove('fade-in');
+          card.style.opacity = '1';
           hiddenCount++;
         }
       });
@@ -77,14 +100,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Filter gallery items based on active tags
   function filterGallery() {
     let hiddenCount = 0;
+    let visibleIndex = 0;
     
     if (activeTags.size === 0) {
       // Show all if no tags selected
-      galleryItems.forEach(item => {
+      galleryItems.forEach((item, index) => {
+        const wasHidden = item.style.display === 'none';
         item.style.display = '';
+        
+        if (wasHidden) {
+          item.style.opacity = '0';
+          item.classList.remove('fade-in');
+          void item.offsetWidth; // Force reflow
+          item.style.animationDelay = `${visibleIndex * 0.04}s`;
+          item.classList.add('fade-in');
+          visibleIndex++;
+        }
       });
     } else {
-      galleryItems.forEach(item => {
+      galleryItems.forEach((item, index) => {
         const itemTags = item.getAttribute('data-tags');
         if (!itemTags) {
           item.style.display = 'none';
@@ -100,9 +134,21 @@ document.addEventListener('DOMContentLoaded', function() {
         );
 
         if (hasAnyTag) {
+          const wasHidden = item.style.display === 'none';
           item.style.display = '';
+          
+          if (wasHidden) {
+            item.style.opacity = '0';
+            item.classList.remove('fade-in');
+            void item.offsetWidth; // Force reflow
+            item.style.animationDelay = `${visibleIndex * 0.04}s`;
+            item.classList.add('fade-in');
+            visibleIndex++;
+          }
         } else {
           item.style.display = 'none';
+          item.classList.remove('fade-in');
+          item.style.opacity = '1';
           hiddenCount++;
         }
       });
