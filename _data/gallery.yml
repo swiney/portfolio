@@ -4,18 +4,21 @@
   thumbnail: /assets/thumbnails/thumbnail-boat.jpg
   alt: "Are we there yet?"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
+  tags: [animation, rigging, tools]
 
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/918307020?h=c3df223ba4&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-ball.jpg
   alt: "Highball"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
+  tags: [animation, rigging, tools]
 
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/928752483?h=6353728b31&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-march.jpg
   alt: "Radetzky"
   description: "Animation running realtime in Unity. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
+  tags: [animation, rigging, tools]
 
 # Clockwork Scorpion
 - type: image
@@ -23,18 +26,21 @@
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion1.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
+  tags: [modelling]
 
 - type: image
   src: /assets/projects/02/clockwork-scorpion-render2.png
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion2.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
+  tags: [modelling]
 
 - type: image
   src: /assets/projects/02/clockwork-scorpion-render3.png
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion3.jpg
   alt: Clockwork Scorpion
   description: "See <a href='/projects/procedural-animation/#clockwork-scorpion'>Clockwork Scorpion Project</a> for more details."
+  tags: [modelling]
 
 # Clockwork Spider
 - type: image
@@ -42,18 +48,21 @@
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-front.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+  tags: [animation, rigging, modelling]
 
 - type: image
   src: /assets/gallery/clockwork-spider-side.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-side.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+  tags: [animation, rigging, modelling]
 
 - type: image
   src: /assets/gallery/clockwork-spider-top.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-top.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
+  tags: [animation, rigging, modelling]
 
 # M107
 - type: image
@@ -61,6 +70,7 @@
   thumbnail: /assets/thumbnails/thumbnail-barrett.jpg
   alt: Barrett M107 Render
   description: "Fully rigged rifle with all internal mechanisms recreated accurately. See <a href='/projects/m107'>the project page</a> for more details."
+  tags: [rigging, modelling]
 
 # Preying Mantis
 - type: embed
@@ -68,30 +78,35 @@
   thumbnail: /assets/thumbnails/thumbnail-preying-mantis.jpg
   alt: "Preying Mantis"
   description: "'Preying Mantis'"
+  tags: [animation]
 
 # Cat Rig
 - type: video
   src: /assets/gallery/cat-dynamic-rig.mp4
   thumbnail: /assets/thumbnails/thumbnail-cat-rig.jpg
   description: Cat Rig with dynamically driven body parts for maximum cartooniness.
+  tags: [rigging]
 
 # Shooty Ballz
 - type: video
   src: /assets/gallery/shooty-ballz-1.mp4
   thumbnail: /assets/thumbnails/thumbnail-shooty-ballz.jpg
   description: "Top 20 GMTK Game Jam entry, Shooty Ballz. See <a href='https://youtu.be/RGeAkU2wu4o?t=1081'>Mark Brown's segment about this entry.</a>"
+  tags: [game-dev]
 
 # Crystal Lighting Test
 - type: video
   src: /assets/gallery/sketchy-lighting.mp4
   thumbnail: /assets/thumbnails/thumbnail-sketchy-lighting.jpg
   description: "Custom Shader: Stylised Sketchy Lighting"
+  tags: [shaders]
 
 # Holo Card
 - type: video
   src: /assets/gallery/holo-card.mp4
   thumbnail: /assets/thumbnails/thumbnail-holo-card.jpg
   description: "Custom Shader: Holographic Card effect is mapped to phone gyroscope for realistic feel."
+  tags: [shaders]
 
 # RABC Characters
 - type: image
@@ -99,15 +114,18 @@
   thumbnail: /assets/thumbnails/thumbnail-rabc-characters.jpg
   alt: RoyalABC Characters
   description: "Some of the characters from RoyalABC. I was responsible for all Rigging, and a lot of the modelling and animation."
+  tags: [modelling, rigging]
 
 # Texture Animator
 - type: video
   src: /assets/projects/03/flipbook-animator-with-ui.mp4
   thumbnail: /assets/thumbnails/thumbnail-flipbook-system.jpg
   description: "Custom Flipbook sytle animation system I developed. See <a href='/projects/flipbook-animation-system'>Flipbook Animation System</a> for more details."
+  tags: [tools, rigging]
 
 # Pong
 - type: video
   src: /assets/gallery/next-level-pong.mp4
   thumbnail: /assets/thumbnails/thumbnail-pong.jpg
   description: "Facing off against the hardest AI in my recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
+  tags: [game-dev]

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const tagButtons = document.querySelectorAll('.tag-btn');
   const projectCards = document.querySelectorAll('.project-card');
+  const galleryItems = document.querySelectorAll('.gallery-item');
   let activeTags = new Set();
 
   // Parse URL parameters on page load
@@ -55,7 +56,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Update button states
+  // Filter gallery items based on active tags
+  function filterGallery() {
+    if (activeTags.size === 0) {
+      // Show all if no tags selected
+      galleryItems.forEach(item => {
+        item.style.display = '';
+      });
+      return;
+    }
+
+    galleryItems.forEach(item => {
+      const itemTags = item.getAttribute('data-tags');
+      if (!itemTags) {
+        item.style.display = 'none';
+        return;
+      }
+
+      const itemTagArray = itemTags.split(',').map(tag => tag.trim());
+      
+      // Show item if it has ANY of the active tags (OR logic)
+      const hasAnyTag = Array.from(activeTags).some(tag => 
+        itemTagArray.includes(tag)
+      );
+
+      item.style.display = hasAnyTag ? '' : 'none';
+    });
+  }
+
+  // Update button states (for all tag button instances)
   function updateButtonStates() {
     tagButtons.forEach(btn => {
       const tag = btn.getAttribute('data-tag');
@@ -69,14 +98,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle tag button clicks
   tagButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
       const tag = this.getAttribute('data-tag');
+      
+      // Check if this button is in the gallery section by looking for the ID
+      const portfolioTagsContainer = this.closest('.portfolio-tags');
+      const isGallerySection = portfolioTagsContainer?.id === 'gallery-tags';
+      
+      // Store multiple reference points for more robust tracking
+      let savedScrollY = null;
+      let buttonRect = null;
+      let gallerySection = null;
+      let gallerySectionRect = null;
+      
+      if (isGallerySection) {
+        savedScrollY = window.pageYOffset;
+        buttonRect = this.getBoundingClientRect();
+        gallerySection = document.querySelector('.gallery-section');
+        if (gallerySection) {
+          gallerySectionRect = gallerySection.getBoundingClientRect();
+        }
+      }
 
       if (tag === 'all') {
-        // Clear all tags
         activeTags.clear();
       } else {
-        // Toggle tag
         if (activeTags.has(tag)) {
           activeTags.delete(tag);
         } else {
@@ -86,7 +132,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
       updateButtonStates();
       filterProjects();
+      filterGallery();
       updateURL();
+      
+      // Compensate for layout shift when clicking gallery tags
+      if (isGallerySection && buttonRect) {
+        // Use requestAnimationFrame to ensure DOM has updated
+        requestAnimationFrame(() => {
+          // Get new positions after filtering
+          const newButtonRect = this.getBoundingClientRect();
+          const shift = newButtonRect.top - buttonRect.top;
+          
+          // Calculate max scrollable distance
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          
+          if (Math.abs(shift) > 1) {
+            // Calculate target scroll position
+            let targetScroll = window.pageYOffset + shift;
+            
+            // Clamp to valid scroll range
+            targetScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+            
+            window.scrollTo({ 
+              top: targetScroll, 
+              behavior: 'instant' 
+            });
+          }
+        });
+      }
     });
   });
 
@@ -95,4 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
   urlTags.forEach(tag => activeTags.add(tag));
   updateButtonStates();
   filterProjects();
+  filterGallery();
 });

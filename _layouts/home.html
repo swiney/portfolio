@@ -55,6 +55,8 @@ author_profile: false
   <!-- Tag Filter Section -->
   <div class="portfolio-tags">
     {% assign all_tags = "" | split: "" %}
+    
+    {% comment %}Collect tags from projects{% endcomment %}
     {% for project in site.projects %}
       {% if project.tags %}
         {% for tag in project.tags %}
@@ -64,6 +66,18 @@ author_profile: false
         {% endfor %}
       {% endif %}
     {% endfor %}
+    
+    {% comment %}Collect tags from gallery items{% endcomment %}
+    {% for item in site.data.gallery %}
+      {% if item.tags %}
+        {% for tag in item.tags %}
+          {% unless all_tags contains tag %}
+            {% assign all_tags = all_tags | push: tag %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    
     {% assign sorted_tags = all_tags | sort %}
     
     <div class="tag-buttons">
@@ -139,6 +153,42 @@ author_profile: false
   </div>
 </section>
 
+<!-- Tag Filter Section for Gallery -->
+<div class="portfolio-tags" id="gallery-tags">
+  {% assign all_tags = "" | split: "" %}
+  
+  {% comment %}Collect tags from projects{% endcomment %}
+  {% for project in site.projects %}
+    {% if project.tags %}
+      {% for tag in project.tags %}
+        {% unless all_tags contains tag %}
+          {% assign all_tags = all_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %}Collect tags from gallery items{% endcomment %}
+  {% for item in site.data.gallery %}
+    {% if item.tags %}
+      {% for tag in item.tags %}
+        {% unless all_tags contains tag %}
+          {% assign all_tags = all_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  
+  {% assign sorted_tags = all_tags | sort %}
+  
+  <div class="tag-buttons">
+    {% for tag in sorted_tags %}
+      <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+    <button class="tag-btn tag-clear" data-tag="all">Show All</button>
+  </div>
+</div>
+
 
 
 <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
@@ -150,6 +200,7 @@ author_profile: false
       <div class="gallery-item"
           {% if item.description %}data-description="{{ item.description }}"{% endif %}
           {% if item.link %}data-link="{{ item.link }}"{% endif %}
+          {% if item.tags %}data-tags="{{ item.tags | join: ',' }}"{% endif %}
           data-type="{{ item.type }}"
           {% if item.src %}data-src="{{ item.src }}"{% endif %}
           {% if item.embed %}data-embed="{{ item.embed | escape }}"{% endif %}>
