@@ -1,7 +1,7 @@
 ---
 title: "Clockwork Spider"
 subtitle: "Procedural Animation"
-description: "Procedurally animated clockwork spider + Sneak peak at something new :)"
+description: "Procedurally animated clockwork spider + Sneak peek at something new :)"
 thumbnail_static: /assets/projects/02/thumbnail1.png
 thumbnail_animated: /assets/projects/02/thumbnail2.png
 layout: project
@@ -16,9 +16,9 @@ tags: [animation, rigging]
 <div class="indented-section">{{ indented-section | markdownify }}</div>
 
 {% capture indented-section %}
-I originally modelled this clockwork spider over 3 days for a short challenge. I gathered references of various clock and watch parts, and pieced them together to create the model. The final product was 3 renders (using V-Ray + compositing in After Effects)
+I originally modelled this clockwork spider over 3 days for a short challenge. I gathered references of various clock and watch parts and pieced them together to create the model. The final product consisted of 3 renders (using V-Ray + compositing in After Effects).
 
-[![Clockwork Spider Renders](/assets/projects/02/clockworks-spider-renders.png)](/assets/projects/02/clockworks-spider-renders.png)
+[![Clockwork Spider Render 1/3](/assets/projects/02/clockworks-spider-renders.png)](/assets/projects/02/clockworks-spider-renders.png)
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
@@ -26,9 +26,9 @@ I originally modelled this clockwork spider over 3 days for a short challenge. I
 
 {% capture indented-section %}
 Wireframes:
-[![Clockwork Spider Renders](/assets/projects/02/clockwork-spider-wireframe1.png)](/assets/projects/02/clockwork-spider-wireframe1.png)
+[![Clockwork Spider Render 2/3](/assets/projects/02/clockwork-spider-wireframe1.png)](/assets/projects/02/clockwork-spider-wireframe1.png)
 
-[![Clockwork Spider Renders](/assets/projects/02/clockwork-spider-wireframe2.png)](/assets/projects/02/clockwork-spider-wireframe2.png)
+[![Clockwork Spider Render 3/3](/assets/projects/02/clockwork-spider-wireframe2.png)](/assets/projects/02/clockwork-spider-wireframe2.png)
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
@@ -41,9 +41,9 @@ Wireframes:
 # Procedural Animation
 {: .heading-accent }
 ------------
-Much later, I rigged the model for the purposes of procedurally animating it in Unity for a showcase in Tokyo. 
+Much later, I rigged the model to procedurally animate it in Unity for a showcase in Tokyo.
 
-The spider uses no animated frames for its movement. Instead, all movement is driven by code — Procedural Animation — and the full logic all lives in 1 script, which I'll provide here in its entirety:
+The spider uses no animated frames for its movement. Instead, all movement is driven by code — Procedural Animation — and all of the logic lives in one script, which I'll provide here in its entirety:
 ```csharp
 
 using System;
@@ -267,8 +267,8 @@ The concept is fairly simple when broken down:
 * The body is assigned a built-in Damped Transform Constraint, to smooth out movements.
 * The body is told to move towards a target position.
 * Every leg is set up with a built-in IK Constraint.
-* Each foot has a goal area it needs to keep close to. When the leg extends too far from this goal (due to the body moving away), the leg will take a step to the position.
-* Arachnids tend to move their legs in pairs. So I implemented a similar logic here. Legs **diagonally opposite** each other will try to take steps at the same time. Legs **directly opposite** each other will avoid taking steps until the opposite leg has finished its step.
+* Each foot has a goal area it needs to keep close to. When the leg extends too far from this goal (due to the body moving away), the leg will take a step to the new position.
+* Arachnids tend to move their legs in pairs, so I implemented a similar logic here. Legs **diagonally opposite** each other will try to take steps at the same time. Legs **directly opposite** each other will avoid taking steps until the opposite leg has finished its step.
 
 With the described logic above, it will seem like the legs are always 'catching up' to the body, because that's essentially what is happening — the body moves first, and the legs try to follow. To mitigate this, the logic overshoots the legs' stepping positions.
 
@@ -279,7 +279,7 @@ For the demo, the user moves a laser pointer around the screen, and 3 clockwork 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>
 
-This has also been ported to run on mobile, so if you ever see me in person, make sure to ask me to see it :)
+This has also been ported to run on mobile, so if you ever see me in person, make sure to ask me to show it to you :)
 
 <div class="video-wrapper">
   <video autoplay loop muted playsinline>
@@ -297,7 +297,7 @@ This has also been ported to run on mobile, so if you ever see me in person, mak
 # Clockwork Scorpion
 {: .heading-accent }
 ------------
-I'm now working on a *"sequel"* to the spider. A Scorpion. This model is many times more complicated, with a lot of moving parts. The scorpion will eventually use the procedural animation system as well. Here are some sneak previews:
+I'm now working on a *"sequel"* to the spider. A scorpion. This model is many times more complicated, with a lot of moving parts. The scorpion will eventually use the procedural animation system as well. Here are some sneak previews:
 
 [![Clockwork Scorpion Render1](/assets/projects/02/clockwork-scorpion-render1.png)](/assets/projects/02/clockwork-scorpion-render1.png)
 [![Clockwork Scorpion Render2](/assets/projects/02/clockwork-scorpion-render2.png)](/assets/projects/02/clockwork-scorpion-render2.png)

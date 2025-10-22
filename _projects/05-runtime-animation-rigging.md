@@ -12,9 +12,9 @@ tags: [rigging]
 
 *Stay Tuned! A more detailed breakdown of this project is coming soon!*
 
-As our target audience of about 3-6yo children were growing up, we wanted to "age" some of the characters in the game world so that the style of the game would remain relatable with our players.
+As our target audience of about 3-6 year old children were growing up, we wanted to "age" some of the characters in the game world so that the style of the game would remain relatable with our players.
 
-We all know that aging a character isn't just about scaling it up 150%.
+We all know that aging a character isn't just about scaling them up 150%.
 
 {% include captioned_image.html src="/assets/projects/05/proportions-chart.png" caption="Image credit: 'Nursing Daddy Blog'" %}
 
@@ -26,7 +26,7 @@ So I used some animation runtime rigging techniques to allow us to change the pr
 I identified these parameters as needing adjustment:
 * **Shoulder Width:** Older boys are slightly wider than girls.
 * **Head Height:** Neck elongates when growing up.
-* **Spine Length:** Becomes proportiontely elongated.
+* **Spine Length:** Becomes proportionately elongated.
 * **Leg Width:** Becomes proportionately thinner.
 * **Leg Length:** Becomes proportionately longer.
 * **Feet Size:** Becomes slightly smaller proportionately.

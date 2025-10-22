@@ -32,7 +32,7 @@ From the start of production, our team had identified that a highly customisable
 * Motivate them to progress through the game as they chased the next outfit piece.
 * Create a sense of community when they see their classmates' customised avatars in-game.
 
-In addition to the above, a highly extensible character was necessary as we forcasted huge amounts of storytelling requiring a host of various types of characters/outfits.
+In addition to the above, a highly extensible character was necessary as we forecasted huge amounts of storytelling requiring a host of various types of characters/outfits.
 
 {% include captioned_image.html src="/assets/projects/04/ingame-customisation.png" alt="Ingame Customisation" caption="In-game Character Customisation screen" %}
 
@@ -49,10 +49,10 @@ Before we dive into the toolsets, here's a bit about the actual master character
 | Unified rig to streamline workflow and share animations | 1 master rig supports boy + girl characters. Non-unique parts are swappable (eg: Boy's limbs are slightly thicker. Girl has longer eye lashes) |
 | Customisable skin/eye/hair color | Shader-based color swapping on channel-packed textures. |
 | Hundreds of outfit options across several categories | Majority of outfit variations are texture-based. |
-| Low runtime cost. Up to 20 characters rendered onscreen concurrently, on circa 2015 mid-range mobile devices | [Specialised Efficient Facial Rig](../flipbook-animation-system/). All deformations are joint-based. Extensive profiling. |
+| Low runtime cost. Up to 20 characters rendered on-screen concurrently, on circa 2015 mid-range mobile devices | [Specialised Efficient Facial Rig](../flipbook-animation-system/). All deformations are joint-based. Extensive profiling. |
 
 
-{% include captioned_image.html src="/assets/projects/04/kid-rig.png" alt="Screenshot of Master Rig" caption="The Rig that powered hundreds of animations and thousands of outfit of combinations." %}
+{% include captioned_image.html src="/assets/projects/04/kid-rig.png" alt="Screenshot of Master Rig" caption="The Rig that powered hundreds of animations and thousands of outfit combinations." %}
 
 
 <br>
@@ -62,7 +62,7 @@ Before we dive into the toolsets, here's a bit about the actual master character
 
 Given such a huge system, it was only natural that problems came up during production. Here are some notable ones:
 
-* ***"No one wants to make more outfits because it's so annoying"*** : The process of adding new outfit variations was slow, error prone, and required multiple people across art/design/programming. The task was so daunting that we just didn't create anymore outfits.
+* ***"No one wants to make more outfits because it's so annoying"*** : The process of adding new outfit variations was slow, error prone, and required multiple people across art/design/programming. The task was so daunting that we just didn't create any more outfits.
 
 * **Outfit Definitions**: Defining an NPC's look and outfit was done by a programmer. It was difficult for the creative team to experiment.
 
@@ -118,7 +118,7 @@ To address this, I built a toolset in Maya that:
 {% capture indented-section %}
 ### Artist driven NPC customisation
 
-Many NPC's in the game world needed custom outfit/customisation combinations.
+Many NPCs in the game world needed custom outfit/customisation combinations.
 
 Eg: Jane, the cowgirl from the farm story arc was a fair-skinned girl with brown eyes, red hair, and wore a specific outfit. This was all hardcoded.
 
@@ -153,11 +153,11 @@ These customised characters were then exported as .JSON assets and assigned in U
 {% capture indented-section %}
 ### Full Customisation within Maya
 
-Every so often, we would need to do some character renders for promotional purposes etc. As the character customiser was a runtime feature, it required a lot of steps to customise the outfits within Maya. A project came up where we needed to do hundreds of character renders.
+Every so often, we would need to do some character renders for promotional purposes, etc. As the character customiser was a runtime feature, it required a lot of steps to customise the outfits within Maya. A project came up where we needed to do hundreds of character renders.
 
 The solution was to fully recreate the customisation system within Maya so that artists/animators could freely customise their characters while authoring content.
 
-In addition, the outfits would be fully keyframable. That way, each frame could have any number of referenced characters wearing any outfit. This dramatically sped up the workflow when dealing with hundreds of poses.
+In addition, the outfits would be fully keyframeable. That way, each frame could have any number of referenced characters wearing any outfit. This dramatically sped up the workflow when dealing with hundreds of poses.
 
 <div class="video-wrapper">
   <video loop muted playsinline controls>
