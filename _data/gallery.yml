@@ -129,3 +129,19 @@
   thumbnail: /assets/thumbnails/thumbnail-pong.jpg
   description: "Facing off against the hardest AI in my recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
   tags: [game-dev]
+
+
+# Sunswift
+- type: image
+  src: /assets/gallery/sunswift1.jpg
+  thumbnail: /assets/thumbnails/thumbnail-sunswift1.jpg
+  alt: Sunswift Render 1
+  description: "I was provided CAD parts for Sunswift's prototype solar vehicle. I tessellated and reconstructed the parts, then rendered this visualisation."
+  tags: [modelling]
+
+- type: image
+  src: /assets/gallery/sunswift2.jpg
+  thumbnail: /assets/thumbnails/thumbnail-sunswift2.jpg
+  alt: Sunswift Render 2
+  description: "I was provided CAD parts for Sunswift's prototype solar vehicle. I tessellated and reconstructed the parts, then rendered this visualisation."
+  tags: [modelling]
