@@ -12,7 +12,7 @@ tags: [game-dev]
 
 *Stay Tuned! More information about this project is coming soon!*
 
-Paper Plague is a game I am currently developing from scratch. I'm the only programmer. I'm also doing design, animation, effects, and some art.
+Paper Plague is a game I am currently developing from scratch. I'm doing programming, 2d/3d art, design, animation, effects.
 
 <br>
 Promotional Teaser:
