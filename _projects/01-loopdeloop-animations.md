@@ -137,6 +137,16 @@ Here are some of the poses I could hit with this rig:
 
 
 
+<div class="md-spacer-50"></div>
+#### And one of my favourite sequences
+
+With wireframes overlayed:
+
+<div class="video-wrapper">
+  <video loop playsinline controls>
+    <source src="/assets/projects/01/highball-wireframes.mp4" type="video/mp4">
+  </video>
+</div>
 
 
 [loopdeloop-insta]: https://www.instagram.com/loopdeloop_animation
