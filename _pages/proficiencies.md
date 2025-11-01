@@ -13,8 +13,7 @@ layout: null
 - Rigging
 - 3D Modelling
 - 3D Animation
-- Dynamics
-- nCloth
+- Dynamics, nCloth
 - Lighting/Shading/Rendering (V-Ray, Arnold, Renderman)
 </div>
 
@@ -38,10 +37,11 @@ layout: null
 
 <div class="skill-block" markdown="1">
 ## Unity
-- Asset management and integration
+- C#
 - Tools development (Editor/Runtime)
-- VFX, Particles, Shaders (HLSL, Shadergraph, Compute)
 - Prototyping, Gameplay Programming, Systems Planning
+- Asset management and integration
+- VFX, Particles, Shaders (HLSL, Shadergraph, Compute)
 - Procedural Generation
 - Animation Systems
   - Mecanim
