@@ -86,6 +86,13 @@
   description: Cat Rig with dynamically driven body parts for maximum cartooniness.
   tags: [rigging]
 
+# Toad Animations
+- type: video
+  src: /assets/gallery/toad-anims.mp4
+  thumbnail: /assets/thumbnails/thumbnail-toad-anims.jpg
+  description: "Animations of a bipedal Toad. I created the rig and animations."
+  tags: [animation]
+
 # M107
 - type: image
   src: /assets/gallery/barrett-m107-render.jpg
