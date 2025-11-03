@@ -48,29 +48,28 @@
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-front.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
-  tags: [animation, rigging, modelling]
+  tags: [rigging, modelling]
 
 - type: image
   src: /assets/gallery/clockwork-spider-side.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-side.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
-  tags: [animation, rigging, modelling]
+  tags: [rigging, modelling]
 
 - type: image
   src: /assets/gallery/clockwork-spider-top.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-top.jpg
   alt: Clockwork Spider
   description: "See <a href='/projects/procedural-animation'>Clockwork Spider Project</a> for more details."
-  tags: [animation, rigging, modelling]
-
-# M107
-- type: image
-  src: /assets/gallery/barrett-m107-render.jpg
-  thumbnail: /assets/thumbnails/thumbnail-barrett.jpg
-  alt: Barrett M107 Render
-  description: "Fully rigged rifle with all internal mechanisms recreated accurately. See <a href='/projects/m107'>the project page</a> for more details."
   tags: [rigging, modelling]
+
+# Loopdeloop Highball anim clip
+- type: video
+  src: /assets/projects/01/highball-wireframes.mp4
+  thumbnail: /assets/thumbnails/thumbnail-ball-wires.jpg
+  description: "Snippet of 'Highball'. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
+  tags: [animation, rigging]
 
 # Preying Mantis
 - type: embed
@@ -86,6 +85,14 @@
   thumbnail: /assets/thumbnails/thumbnail-cat-rig.jpg
   description: Cat Rig with dynamically driven body parts for maximum cartooniness.
   tags: [rigging]
+
+# M107
+- type: image
+  src: /assets/gallery/barrett-m107-render.jpg
+  thumbnail: /assets/thumbnails/thumbnail-barrett.jpg
+  alt: Barrett M107 Render
+  description: "Fully rigged rifle with all internal mechanisms recreated accurately. See <a href='/projects/m107'>the project page</a> for more details."
+  tags: [rigging, modelling]
 
 # Shooty Ballz
 - type: video
