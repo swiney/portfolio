@@ -71,6 +71,14 @@
   description: "Snippet of 'Highball'. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
   tags: [animation, rigging]
 
+# RoyalABC Flythrough
+- type: embed
+  embed: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/LuiKk_TZuVs" title="RoyalABC Flythrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  thumbnail: /assets/thumbnails/thumbnail-royalabc-world.jpg
+  alt: "RoyalABC Flythrough"
+  description: "Flythrough of RoyalABC World's starting area. I was on this project from the beginning and played a large role in all things art related."
+  tags: [modelling, game-dev]
+
 # Preying Mantis
 - type: embed
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/80243124?h=af185939f6" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
@@ -91,6 +99,13 @@
   src: /assets/gallery/toad-anims.mp4
   thumbnail: /assets/thumbnails/thumbnail-toad-anims.jpg
   description: "Animations of a bipedal Toad. I created the rig and animations."
+  tags: [animation]
+
+# Bird Animations
+- type: video
+  src: /assets/gallery/bird-anims.mp4
+  thumbnail: /assets/thumbnails/thumbnail-birds.jpg
+  description: "Super quick animation for a bird rig, with animation transfer to other species using the same rig."
   tags: [animation]
 
 # M107
