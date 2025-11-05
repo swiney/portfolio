@@ -223,7 +223,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       if (index !== -1) {
-        openLightbox(index);
+        // Scroll to the gallery item first
+        const galleryItem = items[index];
+        if (galleryItem) {
+          galleryItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Wait a bit for scroll, then open lightbox
+          setTimeout(() => {
+            openLightbox(index);
+          }, 300);
+        }
       }
     }
   }
