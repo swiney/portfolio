@@ -102,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.classList.remove('caption-fixed');
     // Clear inline caption positioning
     captionEl.style.top = '';
+    // Remove hash from URL
+    history.replaceState(null, null, ' ');
   }
 
   function openLightbox(index) {
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const src = item.dataset.src;
     let embedHtml = item.dataset.embed || '';
     const description = item.dataset.description || '';
+    const customUrl = item.dataset.url || null;
 
     if (type === 'image') {
       imgEl.src = src;
@@ -142,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Disable body scroll when lightbox is open
     document.body.style.overflow = 'hidden';
+    
+    // Update URL hash with custom url or index
+    const hashValue = customUrl ? customUrl : `gallery-${index}`;
+    history.replaceState(null, null, `#${hashValue}`);
   }
 
   items.forEach((item, i) => {
@@ -195,6 +202,57 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     if (lightbox.classList.contains('active') && isImageFullSize) {
       updateLightboxAlignment();
+    }
+  });
+  
+  // Check for hash in URL on page load to open specific gallery item
+  function checkHashAndOpenGallery() {
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+      const hashValue = hash.substring(1); // Remove the # character
+      
+      // First, try to find by custom url
+      let index = items.findIndex(item => item.dataset.url === hashValue);
+      
+      // If no url match, try numeric index (e.g., gallery-0, gallery-1)
+      if (index === -1 && hashValue.startsWith('gallery-')) {
+        const numericIndex = parseInt(hashValue.replace('gallery-', ''), 10);
+        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < items.length) {
+          index = numericIndex;
+        }
+      }
+      
+      if (index !== -1) {
+        openLightbox(index);
+      }
+    }
+  }
+  
+  // Open gallery item from URL hash on page load
+  checkHashAndOpenGallery();
+  
+  // Handle hash changes (browser back/forward buttons)
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+      const hashValue = hash.substring(1);
+      
+      // First, try to find by custom url
+      let index = items.findIndex(item => item.dataset.url === hashValue);
+      
+      // If no url match, try numeric index
+      if (index === -1 && hashValue.startsWith('gallery-')) {
+        const numericIndex = parseInt(hashValue.replace('gallery-', ''), 10);
+        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < items.length) {
+          index = numericIndex;
+        }
+      }
+      
+      if (index !== -1) {
+        openLightbox(index);
+      }
+    } else if (!hash && lightbox.classList.contains('active')) {
+      closeLightbox();
     }
   });
 });

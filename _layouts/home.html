@@ -205,6 +205,7 @@ author_profile: false
           {% if item.description %}data-description="{{ item.description }}"{% endif %}
           {% if item.link %}data-link="{{ item.link }}"{% endif %}
           {% if item.tags %}data-tags="{{ item.tags | join: ',' }}"{% endif %}
+          {% if item.url %}data-url="{{ item.url }}"{% endif %}
           data-type="{{ item.type }}"
           {% if item.src %}data-src="{{ item.src }}"{% endif %}
           {% if item.embed %}data-embed="{{ item.embed | escape }}"{% endif %}>

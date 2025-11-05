@@ -1,5 +1,6 @@
 # Loopdeloop
 - type: embed
+  url: loopdeloop-are-we-there-yet
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/909074313?h=8ac712f0d7&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-boat.jpg
   alt: "Are we there yet?"
@@ -7,6 +8,7 @@
   tags: [animation, rigging, tools]
 
 - type: embed
+  url: loopdeloop-highball
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/918307020?h=c3df223ba4&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-ball.jpg
   alt: "Highball"
@@ -14,6 +16,7 @@
   tags: [animation, rigging, tools]
 
 - type: embed
+  url: loopdeloop-radetzky
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/928752483?h=6353728b31&loop=1" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-march.jpg
   alt: "Radetzky"
@@ -22,6 +25,7 @@
 
 # Clockwork Scorpion
 - type: image
+  url: clockwork-scorpion1
   src: /assets/projects/02/clockwork-scorpion-render1.png
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion1.jpg
   alt: Clockwork Scorpion
@@ -29,6 +33,7 @@
   tags: [modelling]
 
 - type: image
+  url: clockwork-scorpion2
   src: /assets/projects/02/clockwork-scorpion-render2.png
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion2.jpg
   alt: Clockwork Scorpion
@@ -36,6 +41,7 @@
   tags: [modelling]
 
 - type: image
+  url: clockwork-scorpion3
   src: /assets/projects/02/clockwork-scorpion-render3.png
   thumbnail: /assets/thumbnails/thumbnail-clockwork-scorpion3.jpg
   alt: Clockwork Scorpion
@@ -44,6 +50,7 @@
 
 # Clockwork Spider
 - type: image
+  url: clockwork-spider1
   src: /assets/gallery/clockwork-spider-front.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-front.jpg
   alt: Clockwork Spider
@@ -51,6 +58,7 @@
   tags: [rigging, modelling]
 
 - type: image
+  url: clockwork-spider2
   src: /assets/gallery/clockwork-spider-side.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-side.jpg
   alt: Clockwork Spider
@@ -58,6 +66,7 @@
   tags: [rigging, modelling]
 
 - type: image
+  url: clockwork-spider3
   src: /assets/gallery/clockwork-spider-top.jpg
   thumbnail: /assets/thumbnails/thumbnail-clockwork-spider-top.jpg
   alt: Clockwork Spider
@@ -66,6 +75,7 @@
 
 # Loopdeloop Highball anim clip
 - type: video
+  url: loopdeloop-highball-wires
   src: /assets/projects/01/highball-wireframes.mp4
   thumbnail: /assets/thumbnails/thumbnail-ball-wires.jpg
   description: "Snippet of 'Highball'. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
@@ -73,6 +83,7 @@
 
 # RoyalABC Flythrough
 - type: embed
+  url: royalabc-flythrough
   embed: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/LuiKk_TZuVs" title="RoyalABC Flythrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-royalabc-world.jpg
   alt: "RoyalABC Flythrough"
@@ -81,6 +92,7 @@
 
 # Preying Mantis
 - type: embed
+  url: preying-mantis
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/80243124?h=af185939f6" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-preying-mantis.jpg
   alt: "Preying Mantis"
@@ -89,6 +101,7 @@
 
 # Cat Rig
 - type: video
+  url: cat-rig
   src: /assets/gallery/cat-dynamic-rig.mp4
   thumbnail: /assets/thumbnails/thumbnail-cat-rig.jpg
   description: Cat Rig with dynamically driven body parts for maximum cartooniness.
@@ -96,6 +109,7 @@
 
 # Toad Animations
 - type: video
+  url: toad-animations
   src: /assets/gallery/toad-anims.mp4
   thumbnail: /assets/thumbnails/thumbnail-toad-anims.jpg
   description: "Animations of a bipedal Toad. I created the rig and animations."
@@ -103,6 +117,7 @@
 
 # Bird Animations
 - type: video
+  url: bird-animations
   src: /assets/gallery/bird-anims.mp4
   thumbnail: /assets/thumbnails/thumbnail-birds.jpg
   description: "Super quick animation for a bird rig, with animation transfer to other species using the same rig."
@@ -110,6 +125,7 @@
 
 # M107
 - type: image
+  url: barrett-m107
   src: /assets/gallery/barrett-m107-render.jpg
   thumbnail: /assets/thumbnails/thumbnail-barrett.jpg
   alt: Barrett M107 Render
@@ -118,6 +134,7 @@
 
 # Shooty Ballz
 - type: video
+  url: shooty-ballz-clip
   src: /assets/gallery/shooty-ballz-1.mp4
   thumbnail: /assets/thumbnails/thumbnail-shooty-ballz.jpg
   description: "Top 20 GMTK Game Jam entry, Shooty Ballz. See <a href='https://youtu.be/RGeAkU2wu4o?t=1081'>Mark Brown's segment about this entry.</a>"
@@ -125,6 +142,7 @@
 
 # Crystal Lighting Test
 - type: video
+  url: crystal-lighting-demo
   src: /assets/gallery/sketchy-lighting.mp4
   thumbnail: /assets/thumbnails/thumbnail-sketchy-lighting.jpg
   description: "Custom Shader: Stylised Sketchy Lighting"
@@ -132,6 +150,7 @@
 
 # Holo Card
 - type: video
+  url: holographic-card-demo
   src: /assets/gallery/holo-card.mp4
   thumbnail: /assets/thumbnails/thumbnail-holo-card.jpg
   description: "Custom Shader: Holographic Card effect is mapped to phone gyroscope for realistic feel."
@@ -139,6 +158,7 @@
 
 # RABC Characters
 - type: image
+  url: rabc-characters
   src: /assets/gallery/rabc-characters.jpg
   thumbnail: /assets/thumbnails/thumbnail-rabc-characters.jpg
   alt: RoyalABC Characters
@@ -147,6 +167,7 @@
 
 # Texture Animator
 - type: video
+  url: flipbook-animator-demo
   src: /assets/projects/03/flipbook-animator-with-ui.mp4
   thumbnail: /assets/thumbnails/thumbnail-flipbook-system.jpg
   description: "Custom Flipbook sytle animation system I developed. See <a href='/projects/flipbook-animation-system'>Flipbook Animation System</a> for more details."
@@ -154,6 +175,7 @@
 
 # Pong
 - type: video
+  url: next-level-pong-clip
   src: /assets/gallery/next-level-pong.mp4
   thumbnail: /assets/thumbnails/thumbnail-pong.jpg
   description: "Facing off against the hardest AI in my recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
@@ -162,6 +184,7 @@
 
 # Sunswift
 - type: image
+  url: sunswift1
   src: /assets/gallery/sunswift1.jpg
   thumbnail: /assets/thumbnails/thumbnail-sunswift1.jpg
   alt: Sunswift Render 1
@@ -169,6 +192,7 @@
   tags: [modelling]
 
 - type: image
+  url: sunswift2
   src: /assets/gallery/sunswift2.jpg
   thumbnail: /assets/thumbnails/thumbnail-sunswift2.jpg
   alt: Sunswift Render 2
