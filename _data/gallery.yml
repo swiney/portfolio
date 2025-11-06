@@ -96,7 +96,7 @@
   embed: '<iframe title="vimeo-player" src="https://player.vimeo.com/video/80243124?h=af185939f6" width="1280" height="720" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>'
   thumbnail: /assets/thumbnails/thumbnail-preying-mantis.jpg
   alt: "Preying Mantis"
-  description: "'Preying Mantis'"
+  description: "'Preying Mantis'. My university major project. Winner of 'Best Animation' at the 2013 COFA Annual."
   tags: [animation]
 
 # Cat Rig
@@ -178,7 +178,7 @@
   url: next-level-pong-clip
   src: /assets/gallery/next-level-pong.mp4
   thumbnail: /assets/thumbnails/thumbnail-pong.jpg
-  description: "Facing off against the hardest AI in my recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
+  description: "Facing off against the hardest AI in my modern recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
   tags: [game-dev]
 
 
