@@ -14,7 +14,10 @@ layout: null
 - 3D Modelling
 - 3D Animation
 - Dynamics, nCloth
-- Lighting/Shading/Rendering (V-Ray, Arnold, Renderman)
+- Lighting and Shading
+- Rendering (V-Ray, Arnold, Renderman)
+- Wrangling distributed rendering
+- Designated troubleshooter. I've been using Maya since 2008 and know it inside out.
 </div>
 
 <div class="skill-block" markdown="1">
@@ -42,12 +45,12 @@ layout: null
 - Prototyping, Gameplay Programming, Systems Planning
 - Asset management and integration
 - VFX, Particles, Shaders (HLSL, Shadergraph, Compute)
-- Procedural Generation
 - Animation Systems
   - Mecanim
   - Runtime animation rigging
   - Procedural animation
 - Cutscenes, Custom Timeline behaviours
+- Procedural Generation
 - UI implementation
 </div>
 
