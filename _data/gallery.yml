@@ -181,6 +181,14 @@
   description: "Facing off against the hardest AI in my modern recreation of Pong. Check it out: <a href='https://play.google.com/store/apps/details?id=com.StudioSquish.NextLevelPong'>Next Level PONG (Play Store)</a>"
   tags: [game-dev]
 
+# Statemachine System
+- type: image
+  url: statemachine-system
+  src: /assets/gallery/statemachine-system.png
+  thumbnail: /assets/thumbnails/thumbnail-statemachine-system.jpg
+  alt: Custom Statemachine System with Node Editor
+  description: "Custom Statemachine system that I developed. The custom Node Editor uses the Unity Experimental GraphView API and it allows editing of states, transitions and conditions visually. This is a fully working proof of concept. I plan to recreate the Node Editor using the new Unity Graph Toolkit which should alleviate a lot of the problems I had when using the Experimental GraphView API."
+  tags: [tools, game-dev]
 
 # Sunswift
 - type: image
