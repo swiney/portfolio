@@ -81,6 +81,16 @@
   description: "Snippet of 'Highball'. See <a href='/projects/loopdeloop'>Loopdeloop Project</a> for more details."
   tags: [animation, rigging]
 
+
+# Panda Paragliding
+- type: video
+  url: panda
+  src: /assets/gallery/panda.mp4
+  thumbnail: /assets/thumbnails/thumbnail-panda.jpg
+  description: "Short personal project, completed in about 4 days. Includes concept, modelling, rigging, animation, lookdev, rendering. Maya + Unity HDRP."
+  tags: [animation]
+
+
 # RoyalABC Flythrough
 - type: embed
   url: royalabc-flythrough
