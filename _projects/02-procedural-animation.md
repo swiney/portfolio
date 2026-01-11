@@ -2,8 +2,8 @@
 title: "Clockwork Spider"
 subtitle: "Procedural Animation"
 description: "Procedurally animated clockwork spider + Sneak peek at something new :)"
-thumbnail_static: /assets/projects/02/thumbnail1.png
-thumbnail_animated: /assets/projects/02/thumbnail2.png
+thumbnail_static: /assets/projects/02/thumbnail1.jpg
+thumbnail_animated: /assets/projects/02/thumbnail2.jpg
 layout: project
 permalink: /projects/procedural-animation/
 weight: 20 # Order for gallery
@@ -18,7 +18,7 @@ tags: [animation, rigging]
 {% capture indented-section %}
 I originally modelled this clockwork spider over 3 days for a short challenge. I gathered references of various clock and watch parts and pieced them together to create the model. The final product consisted of 3 renders (using V-Ray + compositing in After Effects).
 
-[![Clockwork Spider Render 1/3](/assets/projects/02/clockworks-spider-renders.png)](/assets/projects/02/clockworks-spider-renders.png)
+[![Clockwork Spider Render 1/3](/assets/projects/02/clockworks-spider-renders.jpg)](/assets/projects/02/clockworks-spider-renders.png)
 
 {% endcapture %}
 <div class="indented-section">{{ indented-section | markdownify }}</div>

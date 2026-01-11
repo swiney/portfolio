@@ -2,8 +2,8 @@
 title: "Character Customisation Systems"
 subtitle: "Maya and Unity Toolset"
 description: "Breakdown of an extensive character customisation system and the associated tools."
-thumbnail_static: /assets/projects/04/thumbnail1.png
-thumbnail_animated: /assets/projects/04/thumbnail2.png
+thumbnail_static: /assets/projects/04/thumbnail1.jpg
+thumbnail_animated: /assets/projects/04/thumbnail2.jpg
 layout: project
 permalink: /projects/character-customisation/
 weight: 40 # Order for gallery

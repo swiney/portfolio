@@ -2,8 +2,8 @@
 title: "Adjustable Characters"
 subtitle: "Runtime Animation Rigging"
 description: "See how I was able to create a system allowing character proportions to change at runtime."
-thumbnail_static: /assets/projects/05/thumbnail1.png
-thumbnail_animated: /assets/projects/05/thumbnail1.png
+thumbnail_static: /assets/projects/05/thumbnail1.jpg
+thumbnail_animated: /assets/projects/05/thumbnail1.jpg
 layout: project
 permalink: /projects/runtime-animation-rigging/
 weight: 50 # Order for gallery

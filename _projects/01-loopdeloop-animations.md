@@ -2,8 +2,8 @@
 title: "Loopdeloop"
 subtitle: "Real-time Animations"
 description: "Perfectly looping animations made in Maya/Unity, utilising a huge range of tech and art skills.<br><br>See the breakdown of some techniques I used."
-thumbnail_static: /assets/projects/01/thumbnail3.png
-thumbnail_animated: /assets/projects/01/thumbnail4.png
+thumbnail_static: /assets/projects/01/thumbnail1.jpg
+thumbnail_animated: /assets/projects/01/thumbnail2.jpg
 layout: project
 permalink: /projects/loopdeloop/
 weight: 10 # Order for gallery
