@@ -51,7 +51,7 @@ Before I reveal the results of this technique, I want to show the texture maps f
 
 
 Here are the palettes I used to color an entire environment. There are 2, each 128x128 in size:<br>
-![Palettes](/assets/projects/11/palette-texture-withgrid.jpg)
+![Palettes](/assets/projects/11/palette-texture-withgrid.png)
 
 And here are the textures shown in their actual size:<br>
 ![Palettes, Actual Size](/assets/projects/11/palette-texture-actualsize.png)
@@ -75,7 +75,7 @@ Wireframes to give an idea of how the scene was constructed with this palette te
 ![Environment (Wireframes)](/assets/projects/11/palette-alley-wireframe.jpg)
 
 Here are the UVs of one of the assets from this scene:
-![UVs of an asset](/assets/projects/11/palette-alley-building-uvs.jpg)
+![UVs of an asset](/assets/projects/11/palette-alley-building-uvs.png)
 
 
 
