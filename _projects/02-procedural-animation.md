@@ -7,7 +7,7 @@ thumbnail_animated: /assets/projects/02/thumbnail2.jpg
 layout: project
 permalink: /projects/procedural-animation/
 weight: 20 # Order for gallery
-tags: [animation, rigging]
+tags: [animation, modelling, rigging]
 ---
 
 {% capture indented-section %}

@@ -109,6 +109,14 @@
   description: "'Preying Mantis'. My university major project. Winner of 'Best Animation' at the 2013 COFA Annual."
   tags: [animation]
 
+# Lottery Alley
+- type: video
+  url: palette-texturing
+  src: /assets/projects/11/palette-alley-recording.mp4
+  thumbnail: /assets/projects/11/thumbnail1.jpg
+  description: Environment textured with a 256x128 texture map using a special technique I developed in 2014. See <a href='/projects/palette-texturing'>the project page</a> for more details."
+  tags: [modelling, game-dev]
+
 # Cat Rig
 - type: video
   url: cat-rig

@@ -7,7 +7,7 @@ thumbnail_animated: /assets/projects/11/thumbnail2.jpg
 layout: project
 permalink: /projects/palette-texturing/
 weight: 55 # Order for gallery
-tags: [game-dev]
+tags: [modelling, game-dev]
 ---
 
 *Page is work in progress*
