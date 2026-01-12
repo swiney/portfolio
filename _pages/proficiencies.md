@@ -22,7 +22,7 @@ layout: null
 
 <div class="skill-block" markdown="1">
 ## Workflow
-- Confluence, Jira, Trello
+- Shotgrid, Confluence, Jira, Trello
 - Agile methodology
 </div>
 
@@ -35,6 +35,7 @@ layout: null
 ## Technical
 - Building computers
 - Computer hardware troubleshooting
+- Photography
 - Quick learner of new software/technologies
 </div>
 
@@ -45,6 +46,7 @@ layout: null
 - Prototyping, Gameplay Programming, Systems Planning
 - Asset management and integration
 - VFX, Particles, Shaders (HLSL, Shadergraph, Compute)
+- URP, HDRP, BIRP
 - Animation Systems
   - Mecanim
   - Runtime animation rigging
