@@ -149,17 +149,18 @@ With wireframes overlayed:
 </div>
 
 
+<div class="md-spacer-50"></div>
+#### And a fancam a friend recorded from one of the screenings, showing audience reaction :)
+
+<div class="video-wrapper">
+  <video loop playsinline controls>
+    <source src="/assets/projects/01/boat-fancam.mp4" type="video/mp4">
+  </video>
+</div>
+
+
 [loopdeloop-insta]: https://www.instagram.com/loopdeloop_animation
 [texture-animator]: ../flipbook-animation-system/
-
-
-
-
-
-
-
-
-
 
 
 
