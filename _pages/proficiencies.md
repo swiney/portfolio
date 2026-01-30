@@ -4,7 +4,7 @@ layout: null
 ---
 <div class="skill-block" markdown="1">
 ## Maya
-- Tools/Pipeline Dev/Scripting (Python, MEL)
+- Tools/Pipeline Dev/Scripting (Python, Qt, MEL)
   - Rigging Tools
   - Pipeline management and integration with external programs
   - Bespoke solutions
