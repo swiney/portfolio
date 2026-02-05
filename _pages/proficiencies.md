@@ -52,6 +52,7 @@ layout: null
   - Runtime animation rigging
   - Procedural animation
 - Cutscenes, Custom Timeline behaviours
+- 2D Animation
 - Procedural Generation
 - UI implementation
 </div>
